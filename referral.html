@@ -336,9 +336,12 @@
                 <div id="mybalance" style="display: inline"></div> {{currency}}
                 </p>
 
-                <input id="newPartner" stule="margin-top: 20px; width:370px; border-radius: 20px 20px 0px 0px;" type="text" placeholder="Partner Address" ng-model="newPartner" maxlength="42" minlength="42" autofocus #newPartner />
-                  <button onclick="unhide()" type="submit" ng-disabled="processing || ethDeposited">Deposit 1 ETH
+                <input id="newPartner" stule="margin-top: 20px 0px 0px 0px; width:300px; border-radius: 20px 20px 0px 0px;" type="text" placeholder="Partner Address" ng-model="newPartner" maxlength="42" minlength="42" autofocus #newPartner />
+                 
+                <button onclick="unhide()" class="button-deposit" type="submit" ng-disabled="processing || ethDeposited">Deposit
                   </button>
+
+
                   <button class="button-partner" type="submit" ng-disabled="processing || !ethDeposited">
                     <b>Become Partner</b>
                   </button>
