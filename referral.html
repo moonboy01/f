@@ -223,7 +223,9 @@
       <strong>Referral</strong>
     </h1>
     <h1 style="font-size: 35px; display: inline;"> Program</h1>
-    </br>
+  </br>
+  <h1 style="font-size: 26px; display: inline;">1 link... For 4 Chains</h1>
+  </br>
     <h1 style="font-size: 18px;">
       <strong>Instantly earn 5% (up to 15%) from every transaction made through your link!</strong>
     </h1>
@@ -294,13 +296,11 @@
                 <p style="text-align: center; font-size: 14px; display: inline;font-family: monospace;">Your Balance:
                 <div id="mybalance" style="display: inline"></div> {{currency}}
                 </p>
-                <a style="font-size: 14px;">
-                  Your Address: <a style="color:#3c64e7;" target="_blank" href="{{scan}}address/{{address}}">{{toplen}}...{{endlen}}</a>
+                  Your Address: <a style="color:#3c64e7;" target="_blank" href="{{scan}}address/{{address}}">{{toplen}}...{{endlen}}
                 </br>
-                  Multisender Address: <a style="color:#3c64e7;" target="_blank" href="{{scan}}address/{{stormMultisender_address}}">{{stormMultisender_short}}</a>
+                  Partner Contract: <a style="color:#3c64e7;" target="_blank" href="{{scan}}address/{{partnerManager_address}}/#readContract">{{partnerManager_short}}
                 </br>
                   Block Number: <span style="display: inline-block;" id="blockNumber"></span>
-                </a>
                 <button type="submit" ng-submit="refresh()" style="padding: 8px; margin-top: 20px;width: 90%;background: #60AE5D;color: #fff;vertical-align: bottom;">
                   <b>JOIN NOW!</b>
                 </button>
@@ -308,9 +308,14 @@
               </td>
               <td style="width: 350px;">
                 <p style="padding-bottom: 0px;font-size: 32px; margin: 0px; text-align: left;font-weight: 500;">How it works</p>
-                <p style="padding-top: 5px;font-size: 13px; margin: 0px; text-align: left;">When performing a transaction a data with the referral link will be entered in the TX, the contract will read this data and will send a part of the TX to the reference wallet.</p>
                 <p style="padding-top: 5px;font-size: 13px; margin: 0px; text-align: left;">
-                  </br> 1) Copy your Referral Link; </br> 2) Share with your friends; </br> 3) Earn 5% every transaction made from your Referral. </br> 4) Use multilevel system to earn 15% you and 10% your referer. </p>
+                  
+                  Each transaction is divided according to the type of input that the Smart Contract receives.
+                  By getting the referral link through the site link, our protocol communicates with smart contracts, and is therefore able to give you your share.</br></br>
+                  
+                  Another of our contracts is used to map Partner accounts. Our protocol will check if the referer account is Partner or not, in case it is Partner then additional fees will be applied.</br></br>
+                  All procedures are fully automatic and based on Smart Contracts.
+                </p>
               </td>
             </tr>
             <div class="space10"></div>
