@@ -486,6 +486,29 @@ input[type="radiob"]:checked:after {
   background: #60ae5d;
   border: 0;
 }
+.button-deposit {
+  display: inline;
+  margin: 0px;
+  width:70px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 0px 20px 0px 0px;
+  padding: 0px;
+  background: #60ae5d;
+  border: 0;
+}
+.button-deposit:hover {
+  display: inline;
+  margin: 0px;
+  width:70px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 0px 20px 0px 0px;
+  padding: 0px;
+  background: #60ae5d;
+  border: 0;
+}
+
 .button-2 {
   color: #fff;
   font-size: 18px;
