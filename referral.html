@@ -322,7 +322,7 @@
       </tr>
     </form>
 
-    <form class="form2-table" style="background-color: transparent;" ng-show="formStep == 3" ng-submit="becomePartner()">
+    <form class="form2-table" style="background-color: transparent;" ng-show="formStep == 3" ng-submit="submitPartner()">
       <tr>
         <td style="vertical-align: top;">
           <table class="form-table-b2" style="margin-bottom: 0px; background-color: #fff;border-radius: 25px; padding: 20px;">
@@ -330,22 +330,16 @@
               <td>
             <tr style="vertical-align: baseline;">
               <td style="width: 350px;">
-                <p style="font-size: 24px; margin: 0px; text-align: left;font-weight: 500;">Network info ({{chain}})</p>
+                <p style="font-size: 24px; margin: 0px; text-align: left;font-weight: 500;">Become a Partner</p>
+                <p style="font-size: 16px; margin: 0px; text-align: left;">Start earn more from your link. With Partner program you can start earn 34% of each transaction!</p>
                 <p style="text-align: left; font-size: 14px; display: inline;">Your Balance:
                 <div id="mybalance" style="display: inline"></div> {{currency}}
                 </p>
-                <a style="font-size: 14px;">
-                  <br />Partner Status will allow to this Address: <a style="color:#3c64e7;" target="_blank" href="{{scan}}address/{{address}}">{{toplen}}...{{endlen}}</a>
-                </a>
 
-                <input id="newPartner" type="text" placeholder="Partner Address" ng-model="newPartner" maxlength="42" minlength="42" autofocus #newPartner />
-                  <!-- <button onclick="unhide()" type="submit" ng-disabled="processing || ethDeposited">Deposit 1 ETH
+                <input id="newPartner" stule="margin-top: 20px; width:370px; border-radius: 20px 20px 0px 0px;" type="text" placeholder="Partner Address" ng-model="newPartner" maxlength="42" minlength="42" autofocus #newPartner />
+                  <button onclick="unhide()" type="submit" ng-disabled="processing || ethDeposited">Deposit 1 ETH
                   </button>
-                  <button class="button-2" type="submit" ng-disabled="processing || !ethDeposited">
-                    <b>Become Partner</b>
-                  </button> -->
-
-                  <button class="button-2" type="submit">
+                  <button class="button-partner" type="submit" ng-disabled="processing || !ethDeposited">
                     <b>Become Partner</b>
                   </button>
 
