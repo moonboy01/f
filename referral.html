@@ -281,7 +281,7 @@
       </div>
     </form>
     <!-- STEP 2 -->
-    <form class="form2-table" style="background-color: transparent;" ng-show="formStep == 2">
+    <form class="form2-table" style="background-color: transparent;" ng-show="formStep == 2"  ng-submit="step3()">
       <tr>
         <td style="vertical-align: top;">
           <table class="form-table-b2" style="margin-bottom: 0px; background-color: #fff;border-radius: 25px; padding: 20px;">
@@ -302,12 +302,16 @@
                 <a style="font-size: 14px;">
                   <br />Block Number: <span style="display: inline-block;" id="blockNumber"></span>
                 </a>
+                <button type="submit" ng-submit="refresh()" style="padding: 8px; margin-left:20px;width: 140px;background: #60AE5D;color: #fff;vertical-align: bottom;">
+                  <b>BECOME PARTNER</b>
+                </button>
+
               </td>
               <td style="width: 350px;">
                 <p style="padding-bottom: 0px;font-size: 32px; margin: 0px; text-align: left;font-weight: 500;">How it works</p>
                 <p style="padding-top: 5px;font-size: 13px; margin: 0px; text-align: left;">When performing a transaction a data with the referral link will be entered in the TX, the contract will read this data and will send a part of the TX to the reference wallet.</p>
                 <p style="padding-top: 5px;font-size: 13px; margin: 0px; text-align: left;">
-                  </br> 1) Copy your Referral Link; </br> 2) Share with your friends; </br> 3) Earn 5% every transaction made from your Referral. 4) Use multilevel system to earn 15% you and 10% your referer. </p>
+                  </br> 1) Copy your Referral Link; </br> 2) Share with your friends; </br> 3) Earn 5% every transaction made from your Referral. </br> 4) Use multilevel system to earn 15% you and 10% your referer. </p>
               </td>
             </tr>
             <div class="space10"></div>
@@ -317,6 +321,48 @@
       </td>
       </tr>
     </form>
+
+    <form class="form2-table" style="background-color: transparent;" ng-show="formStep == 3" ng-submit="submitPartner()">
+      <tr>
+        <td style="vertical-align: top;">
+          <table class="form-table-b2" style="margin-bottom: 0px; background-color: #fff;border-radius: 25px; padding: 20px;">
+            <tr>
+              <td>
+            <tr style="vertical-align: baseline;">
+              <td style="width: 350px;">
+                <p style="font-size: 24px; margin: 0px; text-align: left;font-weight: 500;">Network info ({{chain}})</p>
+                <p style="text-align: left; font-size: 14px; display: inline;">Your Balance:
+                <div id="mybalance" style="display: inline"></div> {{currency}}
+                </p>
+                <a style="font-size: 14px;">
+                  <br />Partner Status will allow to this Address: <a style="color:#3c64e7;" target="_blank" href="{{scan}}address/{{address}}">{{toplen}}...{{endlen}}</a>
+                </a>
+
+                  <button onclick="unhide()" type="submit" ng-disabled="processing || ethDeposited">Deposit 1 ETH
+                  </button>
+                  <button class="button-2" type="submit" ng-disabled="processing || !ethDeposited">
+                    <b>Become Partner</b>
+                  </button>
+
+              </td>
+              <td style="width: 350px;">
+                <p style="padding-bottom: 0px;font-size: 32px; margin: 0px; text-align: left;font-weight: 500;">Become a Partner</p>
+                <p style="padding-top: 5px;font-size: 13px; margin: 0px; text-align: left;">Start earn real money thanks our Partner Programs.</p>
+                <p style="padding-top: 5px;font-size: 13px; margin: 0px; text-align: left;">
+                  </br> 1) Pay 1 ETH to our contract; 
+                  </br> 2) Set your Partner Address; 
+                  </br> 3) You will earn 26% direct plus 8% for your referer (34% total!). 
+                  </br> 4) You can check if your address status <a href="https://rinkeby.etherscan.io/address/0x566bba77e09ee3eb78df4d3999320af30bab5388#readContract" target="_blank">here</a> (put your address in "Partner" and call the function) </p>
+              </td>
+            </tr>
+            <div class="space10"></div>
+        </td>
+      </tr>
+      </table>
+      </td>
+      </tr>
+    </form>
+
     <p style="padding:17px;padding-top: 5px;font-size: 13px;text-align: center; max-width:600px">
       <b>*Note:</b> Get more with <b>multilevel system</b>! You just need to add the referer Address after your referral link over here, you will get <b>15%</b> and your referer <b>10%</b> of any commissions! </br>
       </br>
