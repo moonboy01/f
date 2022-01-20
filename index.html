@@ -18,7 +18,7 @@
       }, 3000);
     </script>
   </head>
-  <body class="body" ng-app="myApp" ng-controller="myCtrl" style="text-align: -webkit-center;" onload="disableSubmit()">
+  <body class="body" ng-app="myApp" ng-controller="myCtrl" style="text-align: -webkit-center;" onload="disableSubmit(), managerPartner()">
     <!-- ALERT -->
     <div class="alert-2">
       <span class="closebtn" style="margin-top: 2px;" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -639,16 +639,22 @@
       </div>
     </br>
     
-      <a class="lighting-menu" style="font-size: 12px;" onclick="referralInfo(), managerPartner()">
+      <a class="lighting-menu" style="font-size: 12px;" onclick="referralInfo()">
         <p>© Snapper.fi 2022</p>
-            <div style="color: #a5a5a5;font-weight: 600;" id="isPartner_footer"></div> <div style="font-size: 0px; display: inline" id="partner_bool"></div>
+            <div style="color: #a5a5a5;font-weight: 600;" id="isPartner_footer"></div>
             <div style="color: #b5b5b5;" id="ref_status"></div>
             <div style="color: #b5b5b5;" id="ref_quote"></div>
             <div style="color: #b5b5b5;" id="ref_referer"></div>
             <div style="color: #b5b5b5;" id="ref_quote_2"></div>
             <div style="color: #b5b5b5;" id="ref_referer_2"></div>
             <div style="color: #b5b5b5;" id="ref_link"></div>
+            
+            <div style="font-size: 0px; display: inline" id="partner_bool"></div>
       </a>
+      <div style="font-size: 0px; display: inline" id="refBaseQuote"></div>
+      <div style="font-size: 0px; display: inline" id="refBaseQuoteRef"></div>
+      <div style="font-size: 0px; display: inline" id="refMultiQuote"></div>
+      <div style="font-size: 0px; display: inline" id="refMultiQuoteRef"></div>
     </ul>
     <!-- SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js"></script>
