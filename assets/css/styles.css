@@ -463,6 +463,23 @@ input[type="radiob"]:checked:after {
   visibility: visible;
   border: 2px solid #fff;
 }
+.input-partner {
+  margin-top: 20px 0px 0px 0px; 
+  width:300px; 
+  border-radius: 20px 20px 0px 0px;
+  box-sizing: border-box;
+  padding: 25px 16px;
+  background: rgb(240, 240, 240);
+  border: 0;
+  color: #363636;
+  font-size: 18px;
+}
+.input-partner:focus {
+  outline: none;
+  border-radius: 20px;
+  border: 0;
+  font-size: 18px;
+}
 
 .button-partner {
   margin-right: 20px;
