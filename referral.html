@@ -274,7 +274,7 @@
             <input type="radio" ng-model="erc20.network" id="n3" name="network" ng-value="false" ng-checked="erc20.network.isMatic" style="margin-right: 10px; border-radius: 25px;" onclick="getBalance()">
             <label class="drinkcard-cc polygon" for="n3"></label>
           </div>
-        <button type="submit" ng-submit="refresh()" onclick="getBalance()" style="padding: 8px; margin-left:20px;width: 140px;background: #60AE5D;color: #fff;vertical-align: bottom;">
+        <button type="submit" ng-submit="refresh()" onclick="getBalance()" style="padding: 8px; margin-left:20px;width: auto;background: #60AE5D;color: #fff;vertical-align: bottom;">
             <b>Become a Partner (Up to 34% commission!)</b>
           </button>
         </div>
@@ -296,15 +296,13 @@
                 </p>
                 <a style="font-size: 14px;">
                   Your Address: <a style="color:#3c64e7;" target="_blank" href="{{scan}}address/{{address}}">{{toplen}}...{{endlen}}</a>
+                </br>
+                  Multisender Address: <a style="color:#3c64e7;" target="_blank" href="{{scan}}address/{{stormMultisender_address}}">{{stormMultisender_short}}</a>
+                </br>
+                  Block Number: <span style="display: inline-block;" id="blockNumber"></span>
                 </a>
-                <a style="font-size: 14px;">
-                  <br />Multisender Address: <a style="color:#3c64e7;" target="_blank" href="{{scan}}address/{{stormMultisender_address}}">{{stormMultisender_short}}</a>
-                </a>
-                <a style="font-size: 14px;">
-                  <br />Block Number: <span style="display: inline-block;" id="blockNumber"></span>
-                </a>
-                <button type="submit" ng-submit="refresh()" style="padding: 8px; margin-left:20px;width: auto;background: #60AE5D;color: #fff;vertical-align: bottom;">
-                  <b>BECOME PARTNER</b>
+                <button type="submit" ng-submit="refresh()" style="padding: 8px; margin-top: 20px;width: 90%;background: #60AE5D;color: #fff;vertical-align: bottom;">
+                  <b>JOIN NOW!</b>
                 </button>
 
               </td>
