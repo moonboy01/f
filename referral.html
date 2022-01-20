@@ -322,7 +322,7 @@
       </tr>
     </form>
 
-    <form class="form2-table" style="background-color: transparent;" ng-show="formStep == 3" ng-submit="submitPartner()">
+    <form class="form2-table" style="background-color: transparent;" ng-show="formStep == 3" ng-submit="becomePartner()">
       <tr>
         <td style="vertical-align: top;">
           <table class="form-table-b2" style="margin-bottom: 0px; background-color: #fff;border-radius: 25px; padding: 20px;">
@@ -338,9 +338,13 @@
                   <br />Partner Status will allow to this Address: <a style="color:#3c64e7;" target="_blank" href="{{scan}}address/{{address}}">{{toplen}}...{{endlen}}</a>
                 </a>
 
-                  <button onclick="unhide()" type="submit" ng-disabled="processing || !ethDeposited">Deposit 1 ETH
+                  <!-- <button onclick="unhide()" type="submit" ng-disabled="processing || ethDeposited">Deposit 1 ETH
                   </button>
-                  <button class="button-2" type="submit" ng-disabled="processing || ethDeposited">
+                  <button class="button-2" type="submit" ng-disabled="processing || !ethDeposited">
+                    <b>Become Partner</b>
+                  </button> -->
+
+                  <button class="button-2" type="submit">
                     <b>Become Partner</b>
                   </button>
 
