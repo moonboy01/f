@@ -506,6 +506,7 @@ input[type="radiob"]:checked:after {
 .button-deposit {
   display: inline;
   margin: 0px;
+  margin-left: -4px;
   width:70px;
   height: 70px;
   color: #fff;
@@ -518,6 +519,7 @@ input[type="radiob"]:checked:after {
 .button-deposit:hover {
   display: inline;
   margin: 0px;
+  margin-left: -4px;
   width:70px;
   height: 70px;
   color: #fff;
