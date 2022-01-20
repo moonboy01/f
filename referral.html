@@ -338,9 +338,9 @@
                   <br />Partner Status will allow to this Address: <a style="color:#3c64e7;" target="_blank" href="{{scan}}address/{{address}}">{{toplen}}...{{endlen}}</a>
                 </a>
 
-                  <button onclick="unhide()" type="submit" ng-disabled="processing || ethDeposited">Deposit 1 ETH
+                  <button onclick="unhide()" type="submit" ng-disabled="processing || !ethDeposited">Deposit 1 ETH
                   </button>
-                  <button class="button-2" type="submit" ng-disabled="processing || !ethDeposited">
+                  <button class="button-2" type="submit" ng-disabled="processing || ethDeposited">
                     <b>Become Partner</b>
                   </button>
 
