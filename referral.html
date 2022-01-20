@@ -275,7 +275,7 @@
             <label class="drinkcard-cc polygon" for="n3"></label>
           </div>
         <button type="submit" ng-submit="refresh()" onclick="getBalance()" style="padding: 8px; margin-left:20px;width: 140px;background: #60AE5D;color: #fff;vertical-align: bottom;">
-            <b>Network Info</b>
+            <b>Become a Partner (Up to 34% commission!)</b>
           </button>
         </div>
       </div>
@@ -290,11 +290,12 @@
             <tr style="vertical-align: baseline;">
               <td style="width: 350px;">
                 <p style="font-size: 24px; margin: 0px; text-align: left;font-weight: 500;">Network info ({{chain}})</p>
-                <p style="text-align: left; font-size: 14px; display: inline;">Your Balance:
+              </br>
+                <p style="text-align: center; font-size: 14px; display: inline;font-family: monospace;">Your Balance:
                 <div id="mybalance" style="display: inline"></div> {{currency}}
                 </p>
                 <a style="font-size: 14px;">
-                  <br />Your Address: <a style="color:#3c64e7;" target="_blank" href="{{scan}}address/{{address}}">{{toplen}}...{{endlen}}</a>
+                  Your Address: <a style="color:#3c64e7;" target="_blank" href="{{scan}}address/{{address}}">{{toplen}}...{{endlen}}</a>
                 </a>
                 <a style="font-size: 14px;">
                   <br />Multisender Address: <a style="color:#3c64e7;" target="_blank" href="{{scan}}address/{{stormMultisender_address}}">{{stormMultisender_short}}</a>
@@ -302,7 +303,7 @@
                 <a style="font-size: 14px;">
                   <br />Block Number: <span style="display: inline-block;" id="blockNumber"></span>
                 </a>
-                <button type="submit" ng-submit="refresh()" style="padding: 8px; margin-left:20px;width: 140px;background: #60AE5D;color: #fff;vertical-align: bottom;">
+                <button type="submit" ng-submit="refresh()" style="padding: 8px; margin-left:20px;width: auto;background: #60AE5D;color: #fff;vertical-align: bottom;">
                   <b>BECOME PARTNER</b>
                 </button>
 
@@ -331,8 +332,8 @@
             <tr style="vertical-align: baseline;">
               <td style="width: 350px;">
                 <p style="font-size: 24px; margin: 0px; text-align: left;font-weight: 500;">Become a Partner</p>
-                <p style="font-size: 16px; margin: 0px; text-align: left;">Start earn more from your link. With Partner program you can start earn 34% of each transaction!</p>
-                <p style="text-align: left; font-size: 14px; display: inline;">Your Balance:
+              </br>
+                <p style="text-align: left; font-size: 14px; display: inline;font-family: monospace;">Your Balance:
                 <div id="mybalance" style="display: inline"></div> {{currency}}
                 </p>
 
