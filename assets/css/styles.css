@@ -507,22 +507,24 @@ input[type="radiob"]:checked:after {
   display: inline;
   margin: 0px;
   width:70px;
+  height: 70px;
   color: #fff;
   font-size: 16px;
   border-radius: 0px 20px 0px 0px;
   padding: 0px;
-  background: #60ae5d;
+  background: #1a70e1;
   border: 0;
 }
 .button-deposit:hover {
   display: inline;
   margin: 0px;
   width:70px;
+  height: 70px;
   color: #fff;
   font-size: 16px;
   border-radius: 0px 20px 0px 0px;
   padding: 0px;
-  background: #60ae5d;
+  background: #1a4ee1;
   border: 0;
 }
 
@@ -545,7 +547,7 @@ input[type="radiob"]:checked:after {
   margin-left: -10px;
   margin-bottom: -15px;
   padding: 25px 0px;
-  background: #60ae5d;
+  background: #4c9149;
   border: 0;
 }
 .button-3 {
