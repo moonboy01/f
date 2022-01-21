@@ -258,7 +258,7 @@
       }
     </script>
     
-    <div class="alert" style="background: #e11a1a; width: auto; display: inline-block;margin: 0 30%; margin-bottom: 50px!important;">
+    <div class="alert" style="background: #e11a1a; width: auto; display: inline-block;margin: 0 30%;margin-top: -50px ;margin-bottom: 50px!important;margin-top: -50px;">
       <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
       <strong>Error: </strong> It looks like you've got unpending balance please make the deposit again to get all the balance unclaimed. If the transaction will be successfull you will receive the arbitrage profits plus the fees from last attempt. </br>
       <strong>Note: </strong> To prevent front-run it is recommended to make a bigger deposit.
@@ -309,7 +309,7 @@
     <a style="font-size: 12px; float: right; display: inline;" href="mailto:snapperfi@protonmail.com"><i class="fa fa-exclamation-triangle"> </i> Report Bug (support@snapper.fi)</a>  
       
     <div class="input-holder btn-holder">
-        <button class="button_getStarted" type="submit" name="submit" id="submit" onclick="fixCheck(), getBalance(), tokenImages(), referralInfo(), hidePartnerInfo()" disabled>
+        <button class="button_getStarted" type="submit" name="submit" id="submit" onclick="fixCheck(), getBalance(), tokenImages(), referralInfo(), hidePartnerInfo(), getHomeLink()" disabled>
           <b>Get started</b>
         </button>
       </div>
