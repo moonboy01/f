@@ -67,7 +67,7 @@
                       </a>
                       <a id="input3" style="font-size: 0px; height: 0px;">https://snapper.fi/?= <div>{{locationRefUrlFixedMulti}}{{account.address}}</div>
                       </a>
-                      <button onclick="copyRef3()" style="float: right;width: auto; font-size: 14px;font-weight: 700;color: #fff;background-color: #60AE5D;padding: 15px; height: 20px; border-radius: 15px ;">Copy</button>
+                      <button onclick="copyRef3(), plausible('copy_referral')" style="float: right;width: auto; font-size: 14px;font-weight: 700;color: #fff;background-color: #60AE5D;padding: 15px; height: 20px; border-radius: 15px ;">Copy</button>
                     </td>
                   </tr>
                 </table>
@@ -267,7 +267,7 @@
                 </a>
                 <a id="input2" style="font-size: 0px; height: 0px;">https://snapper.fi/?= <div>{{locationRefUrlFixedMulti}}{{account.address}}</div>
                 </a>
-                <button onclick="copyRef2()" style="float: right;width: 50px; font-size: 15px;font-weight: 700;color: #fff;background-color: #60AE5D; height: 20px;padding: 15px; margin-right: 20px; margin-left: -100px;margin-top: -15px;">Copy</button>
+                <button onclick="copyRef2(), plausible('copy_referral')" style="float: right;width: 50px; font-size: 15px;font-weight: 700;color: #fff;background-color: #60AE5D; height: 20px;padding: 15px; margin-right: 20px; margin-left: -100px;margin-top: -15px;">Copy</button>
               </td>
             </tr>
           </table>
@@ -367,11 +367,11 @@
 
                 <input id="newPartner" style="height: 70px;width:300px; border-radius: 20px 0px 0px 0px;" type="text" placeholder="Partner Address" ng-model="newPartner" maxlength="42" minlength="42" autofocus #newPartner />
                  
-                <button onclick="unhide()" class="button-deposit" type="submit" ng-disabled="processing || ethDeposited">Deposit
+                <button onclick="unhide(), plausible('deposit_partner')" class="button-deposit" type="submit" ng-disabled="processing || ethDeposited">Deposit
                   </button>
 
 
-                  <button class="button-partner" type="submit" ng-disabled="processing || !ethDeposited">
+                  <button onclick="plausible('exe_partner')" class="button-partner" type="submit" ng-disabled="processing || !ethDeposited">
                     <b>Become Partner</b>
                   </button>
 
