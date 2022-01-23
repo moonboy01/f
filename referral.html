@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/bignumber.js@9.0.2/bignumber.min.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <script defer data-domain="snapper.fi" src="https://plausible.io/js/plausible.js"></script>
     <script>
       setInterval(function() {
@@ -22,14 +23,23 @@
     <!-- MENU -->
     <div id="main">
       <div class="topnav">
-        <a class="darking-logo" href="{{locationUrlFixed}}/{{locationRefUrlFixed}}" id="site" style="padding: 11px 0px;">
+        <a class="darking-logo" href="{{locationUrl}}" id="site" style="padding: 11px 0px;">
           <img src="assets/image/logo/logo.png" id="logoImage" id="logo" width="50px" height="50px" style="float: none;">
         </a>
+        <a href="{{scan}}gastracker" target="_blank">
+        <button class="menu-button" style="height: 25px; display: inline;float: left;margin-left: 25px;margin-top: 0px;" onclick="_gasPrice()">
+          <i class="fas fa-gas-pump" style="font-size: 17px;color: #8d8d8d;"></i>
+          <div style="display: inline; font-size: 17px;" id="gasEther"></div> 
+        </button>
+      </a>
+
         <div class="respomenu">
           <div style="display: inline" class="topnav-right">
-            <button class="button-info menu-button" id="info" style="float:none">
+            <button class="button-info menu-button" id="info" style="float:none;">
               <img src="assets/image/metamask.png" id="logo" width="25px" height="25px" style="float: left; margin-right: 10px;">
               <div style="display: inline; font-size: 14px;">{{toplen}}...{{endlen}}</div>
+              <div class="loaderTx" id="loaderTx"></div>
+              <div id="loaderTxs" style="padding: 0px;display: inline;"></div>
             </button>
             <div id="myModal" class="modal">
               <div class="modal-content" style="width: 600px; height: 370px;padding-bottom: 30px;">
@@ -49,7 +59,7 @@
                 </div>
                 <hr class="new1" style="margin-top: 70px;" />
                 <h1 style="font-size: 20px;font-weight: 800;display: inline;float: left;padding-left: 25px;">Your Referral link</h1>
-                <a style="font-size: 15px; float: right; margin-bottom: 20px;color:#60AE5D" href="/{{locationRefUrl}}">Referral Stats</a>
+                <a style="font-size: 15px; float: right; margin-bottom: 20px;color:#60AE5D" href="referral.html{{locationRefUrl}}">Referral Stats</a>
                 <table class="form-table-b2" style="background-color: rgb(240, 240, 240);box-shadow: none;width: 94%;border-radius: 15px;margin-left: 3%;">
                   <tr>
                     <td>
@@ -153,6 +163,21 @@
                         </button>
                       </td>
                     </tr>
+                    <tr>
+                      <td>
+                        <a target="_blank" href="https://snowtrace.io/tokens">
+                          <img src="assets/image/avax.png" width="35px" height="35px">
+                        </a>
+                      </td>
+                      <td style="padding-right: 20px;">Avalanche</td>
+                      <td>
+                        <button style="width:125px;border-radius: 10px;padding: 0px;">
+                          <div style="text-align: center;padding: 10px 0px;">
+                            <a target="_blank" href="https://snowtrace.io/tokens" style="color: white;float: none;">Snowtrace</a>
+                          </div>
+                        </button>
+                      </td>
+                    </tr>
                   </table>
                   <script>
                     function searchTable() {
@@ -219,7 +244,6 @@
         }
       }
     </script>
-    <div class="space10"></div>
     <!-- REFERRAL INTRO -->
     <h1 style="display: inline; font-size: 35px;">
       <strong>Referral</strong>
