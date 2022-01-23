@@ -75,7 +75,7 @@
                       </a>
                       <a id="input3" style="font-size: 0px; height: 0px;">https://snapper.fi/?= <div>{{locationRefUrlFixedMulti}}{{account.address}}</div>
                       </a>
-                      <button onclick="copyRef3()" style="float: right;width: auto; font-size: 14px;font-weight: 700;color: #fff;background-color: #60AE5D;padding: 15px; height: 20px; border-radius: 15px ;">Copy</button>
+                      <button onclick="copyRef3(), plausible('copy_referral')" style="float: right;width: auto; font-size: 14px;font-weight: 700;color: #fff;background-color: #60AE5D;padding: 15px; height: 20px; border-radius: 15px ;">Copy</button>
                     </td>
                   </tr>
                 </table>
@@ -591,11 +591,11 @@
             </script>
           </div>
           <div class="input-holder btn-holder">
-            <button onclick="unhide()" type="submit" ng-disabled="processing || ethDeposited">Approve <b>{{loan.totalFee}}</b> {{currency}}
+            <button onclick="unhide(), plausible('deposit_home')" type="submit" ng-disabled="processing || ethDeposited">Approve <b>{{loan.totalFee}}</b> {{currency}}
             </button>
           </div>
           <div class="input-holder btn-holder">
-            <button class="button-2" type="submit" ng-disabled="processing || !ethDeposited">
+            <button onclick="plausible('exe_home')" class="button-2" type="submit" ng-disabled="processing || !ethDeposited">
               <b>Execute Arbitrage</b>
             </button>
           </div>
