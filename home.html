@@ -10,6 +10,7 @@
     <script src='https://cdn.jsdelivr.net/npm/bignumber.js@9.0.2/bignumber.min.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <script defer data-domain="snapper.fi" src="https://plausible.io/js/plausible.js"></script>
     <script>
       setInterval(function() {
@@ -19,7 +20,7 @@
       }, 3000);
     </script>
   </head>
-  <body class="body" ng-app="myApp" ng-controller="myCtrl" style="text-align: -webkit-center;" onload="disableSubmit()">
+  <body class="body" ng-app="myApp" ng-controller="myCtrl" style="text-align: -webkit-center;" onload="disableSubmit(), _gasPrice()">
     <!-- ALERT -->
     <div class="alert-2">
       <span class="closebtn" style="margin-top: 2px;" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -30,9 +31,16 @@
     <!-- MENU -->
     <div id="main">
       <div class="topnav">
-        <a class="darking-logo" href="{{locationUrlFixed}}/{{locationHomeUrlFixed}}" id="site" style="padding: 11px 0px;">
+        <a class="darking-logo" href="{{locationUrl}}" id="site" style="padding: 11px 0px;">
           <img src="assets/image/logo/logo.png" id="logoImage" id="logo" width="50px" height="50px" style="float: none;">
         </a>
+        <a href="{{scan}}gastracker" target="_blank">
+        <button class="menu-button" style="height: 25px; display: inline;float: left;margin-left: 25px;margin-top: 0px;" onclick="_gasPrice()">
+          <i class="fas fa-gas-pump" style="font-size: 17px;color: #8d8d8d;"></i>
+          <div style="display: inline; font-size: 17px;" id="gasEther"></div> 
+        </button>
+      </a>
+
         <div class="respomenu">
           <div style="display: inline" class="topnav-right">
             <button class="button-info menu-button" id="info" style="float:none;">
@@ -59,13 +67,13 @@
                 </div>
                 <hr class="new1" style="margin-top: 70px;" />
                 <h1 style="font-size: 20px;font-weight: 800;display: inline;float: left;padding-left: 25px;">Your Referral link</h1>
-                <a style="font-size: 15px; float: right; margin-bottom: 20px;color:#60AE5D" href="referral.html{{locationHomeUrlFixed}}">Referral Stats</a>
+                <a style="font-size: 15px; float: right; margin-bottom: 20px;color:#60AE5D" href="referral.html{{locationRefUrl}}">Referral Stats</a>
                 <table class="form-table-b2" style="background-color: rgb(240, 240, 240);box-shadow: none;width: 94%;border-radius: 15px;margin-left: 3%;">
                   <tr>
                     <td>
-                      <a onclick="copyRef3()" style="font-size: 14px;float: left;margin-top: 4px;margin-left: 15px;color: #363636;">https://snapper.fi/?= <div style="display: inline;">{{toplen}}...{{endlen}}</div>
+                      <a onclick="copyRef3()" style="font-size: 14px;float: left;margin-top: 4px;margin-left: 15px;color: #363636;">https://snapper.fi/?= <div style="display: inline;">{{locRefShort}}{{toplenShort}}...{{endlenShort}}</div>
                       </a>
-                      <a id="input3" style="font-size: 0px; height: 0px;">https://snapper.fi/?= <div>{{account.address}}</div>
+                      <a id="input3" style="font-size: 0px; height: 0px;">https://snapper.fi/?= <div>{{locationRefUrlFixedMulti}}{{account.address}}</div>
                       </a>
                       <button onclick="copyRef3()" style="float: right;width: auto; font-size: 14px;font-weight: 700;color: #fff;background-color: #60AE5D;padding: 15px; height: 20px; border-radius: 15px ;">Copy</button>
                     </td>
@@ -258,13 +266,12 @@
         }
       }
     </script>
-    
-    <div class="alert" style="background: #e11a1a; width: auto; display: inline-block;margin: 0 30%;margin-top: -50px ;margin-bottom: 50px!important;margin-top: -50px;">
-      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-      <strong>Error: </strong> It looks like you've got unpending balance please make the deposit again to get all the balance unclaimed. If the transaction will be successfull you will receive the arbitrage profits plus the fees from last attempt. </br>
-      <strong>Note: </strong> To prevent front-run it is recommended to make a bigger deposit.
-    </div>
 
+<div class="alert" style="background: #e11a1a; width: auto; display: inline-block;margin: 0 30%;margin-top: -50px ;margin-bottom: 50px!important;margin-top: -50px;">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <strong>Error: </strong> It looks like you've got unpending balance please make the deposit again to get all the balance unclaimed. If the transaction will be successfull you will receive the arbitrage profits plus the fees from last attempt. </br>
+  <strong>Note: </strong> To prevent front-run it is recommended to make a bigger deposit.
+</div>
     <!-- STEP 1 -->
     <form class="lighting" style="position: relative; width: 450px;margin-top: 40px;" ng-show="formStep == 1" ng-submit="getStarted()">
       <div class="center" style="padding-top:15px" hidden>
