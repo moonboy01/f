@@ -396,11 +396,24 @@
 
     <p style="padding:17px;padding-top: 5px;font-size: 13px;text-align: center; max-width:600px">
       <b>*Note:</b> Do more with less, thanks the <b>multilevel system</b>! You just need to add the referer Address after your referral link over here, you will get <b>6%</b> and your referer <b>4%</b> of any commissions!</br>
+      
+      <button onclick="sintaxLink()">Check syntax of Links</button>
+    <div id="sintaxLink">
+      <b>Referral Link: "https://domain.com" + "/?=YOUR_ADDRESS"</b></br>
+      <b>Multilevel Link: "https://domain.com" + "/?=YOUR_ADDRESS" + "?=REFERER_ADDRESS"</b></br>
+    </div>
+    <script>
+      function sintaxLink() {
+  var x = document.getElementById("sintaxLink");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+    </script>
+
       </br>
-      <b>"https://domain.com" + "/?=YOUR_ADDRESS" + "?=REFERER_ADDRESS"</b></br>
-    </br></br>
-    <b>Check your referral Link</b> by open it and click on the "© Snapper.fi 2022" in the footer.
-    </p>
     <div class="space10"></div>
     <!-- FOOTER -->
     <ul class="lighting-menu">
