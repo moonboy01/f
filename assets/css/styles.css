@@ -251,6 +251,7 @@ form > p {
   border-radius: 25px;
   background: #fff;
   padding: 0 10px 3px;
+  box-shadow: rgba(165, 165, 165, 0.2) 0px 2px 8px 0px;
 }
 .lighting:hover {
   text-align: left;
@@ -258,6 +259,7 @@ form > p {
   border-radius: 25px;
   background: #fff;
   padding: 0 10px 3px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .lighting-menu {
   padding: 20px;
