@@ -659,7 +659,7 @@ input[type="radiob"]:checked:after {
   text-align-last: center;
 }
 .tooltip {
-  position: absolute;
+  /* position: absolute; */
   display: inline-block;
   border-bottom: 1px dotted #000;
 }
@@ -788,16 +788,16 @@ a {
 }
 .addressBar {
   margin: 15px 20px;
-  width: 90%;
+  width: 360px;
   background: rgb(240, 240, 240);
-  padding: 18px 10px;
+  padding: 18px 0px;
   color: #363636;
 }
 .addressBar:hover {
   margin: 15px 20px;
-  width: 90%;
+  width: 360px;
   background: rgb(240, 240, 240);
-  padding: 18px 10px;
+  padding: 18px 0px;
   cursor: pointer;
   color: #60ae5d;
 }
@@ -1030,4 +1030,21 @@ ul#menu li:hover {
   margin-left: 10px;
   display: inline;
   visibility: hidden;
+}
+.buttonList {
+  width: 150px;
+  height: 35px;
+  padding: 0px;
+  float: right;
+  font-size: 16px;
+  font-weight: 600;
+}
+.buttonList:hover {
+  width: 150px;
+  height: 35px;
+  padding: 0px;
+  float: right;
+  font-size: 16px;
+  font-weight: 600;
+  background:#60AE5D;
 }
