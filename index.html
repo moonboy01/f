@@ -20,7 +20,7 @@
       }, 3000);
     </script>
   </head>
-  <body class="body" ng-app="myApp" ng-controller="myCtrl" style="text-align: -webkit-center;" id="outer-div" onload="disableSubmit(), _gasPrice()">
+  <body class="body" ng-app="myApp" ng-controller="myCtrl" style="text-align: -webkit-center;" onload="disableSubmit(), _gasPrice()">
     <!-- ALERT -->
     <div class="alert-2">
       <span class="closebtn" style="margin-top: 2px;" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -52,8 +52,8 @@
           
           <div id="Menu1" style="justify-content: right;display:none; background:transparent;width: 400px;float: right;">
             
-            <div style="font-size: 14px; background:#fff;margin-top: 15px;border-radius: 15px;padding-bottom: 10px;width: 400px;
-            position: fixed;margin-top: 70px;">
+            <div style="font-size: 14px; background:#fff;margin-top: 15px;border-radius: 15px;padding-bottom: 10px;width: 400px;position: fixed;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            margin-top: 70px;">
 
             <div style="height:10px"></div>
             <a style="font-size: 16px; font-weight: 800;text-align: left;">Your Wallet</a>
@@ -97,8 +97,7 @@
 
           <div id="Menu2" style="justify-content: right;display:none; background:transparent;width: 400px;float: right;" >
 
-            <div style="font-size: 14px; background:#fff;margin-top: 15px;border-radius: 15px;padding-bottom: 10px;width: 400px;
-            position: fixed;">
+            <div style="font-size: 14px; background:#fff;margin-top: 15px;border-radius: 15px;padding-bottom: 10px;width: 400px;position: fixed;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
 
                   <div style="padding:10px 10px 0px 10px;display: revert">
                       <a style="padding: 0px;"><img src="assets/image/eth.png" width="35px" height="35px"><a style="padding: 0px 0px 0px 20px;">Ethereum </br><b style="font-size: 12px;float: left;">id: 1</b></a>
@@ -131,12 +130,8 @@
         menu1_close();
         menu2_close();
       });
+      //id="outer-div"
     </script>
-    <style>
-      #outer-div{
-  position: relative;
-}
-    </style>
 
     <!-- INTRO -->
     <script>
