@@ -45,7 +45,7 @@
       </a>
         <div class="respomenu">
 
-          <button class="button-info menu-button" style="float:none;" onclick="menu1(), menu2_close(),getAccountAwait(), tokenNetwork()">
+          <button class="button-info menu-button" style="float:none;" onclick="menu1(), menu2_close(), getBalanceMenu()">
             <img src="assets/image/metamask.png" id="logo" width="25px" height="25px" style="float: left; margin-right: 10px;">
             <div style="display: inline; font-size: 14px;">{{toplen}}...{{endlen}}</div>
             <div class="loaderTx" id="loaderTx"></div>
@@ -246,7 +246,7 @@
       </div>
 
       <div class="input-holder btn-holder">
-        <button class="button_getStarted" type="submit" onclick="getBalance(), fixCheck()">
+        <button class="button_getStarted" type="submit" onclick="getBalanceForm(), fixCheck()">
           <b>Start Arbitrage</b>
         </button>
       </div>
