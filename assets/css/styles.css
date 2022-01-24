@@ -1046,3 +1046,23 @@ ul#menu li:hover {
   font-weight: 600;
   background:#60AE5D;
 }
+
+.button2List {
+  background: transparent;
+  width: 25px;
+  margin-left: 5px;
+  height: 35px;
+  padding: 0px;
+  float: right;
+  font-size: 16px;
+}
+.button2List:hover {
+  background: transparent;
+  width: 25px;
+  margin-left: 5px;
+  height: 35px;
+  padding: 0px;
+  float: right;
+  font-size: 16px;
+  font-weight: 600;
+}
