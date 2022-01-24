@@ -45,7 +45,7 @@
       </a>
         <div class="respomenu">
 
-          <button class="button-info menu-button" style="float:none;" onclick="menu1(), menu2_close(), tokenNetwork()">
+          <button class="button-info menu-button" style="float:none;" onclick="menu1(), menu2_close(),getAccountAwait(), tokenNetwork()">
             <img src="assets/image/metamask.png" id="logo" width="25px" height="25px" style="float: left; margin-right: 10px;">
             <div style="display: inline; font-size: 14px;">{{toplen}}...{{endlen}}</div>
             <div class="loaderTx" id="loaderTx"></div>
@@ -197,7 +197,7 @@
     <a style="font-size: 12px; float: right; display: inline;" href="mailto:snapperfi@protonmail.com"><i class="fa fa-exclamation-triangle"> </i> Report Bug (support@snapper.fi)</a>  
       
     <div class="input-holder btn-holder">
-        <button class="button_getStarted" type="submit" name="submit" id="submit" onclick="fixCheck(), getBalance(), tokenImages(), referralInfo(), hidePartnerInfo(), getHomeLink()" disabled>
+        <button class="button_getStarted" type="submit" name="submit" id="submit" onclick="fixCheck(), tokenImages(), referralInfo(), hidePartnerInfo(), getHomeLink()" disabled>
           <b>Get started</b>
         </button>
       </div>
@@ -246,7 +246,7 @@
       </div>
 
       <div class="input-holder btn-holder">
-        <button class="button_getStarted" type="submit" onclick="fixCheck(), fixToken()">
+        <button class="button_getStarted" type="submit" onclick="getBalance(), fixCheck()">
           <b>Start Arbitrage</b>
         </button>
       </div>
