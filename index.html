@@ -246,7 +246,7 @@
       </div>
 
       <div class="input-holder btn-holder">
-        <button class="button_getStarted" type="submit" onclick="getBalanceForm(), fixCheck()">
+        <button class="button_getStarted" type="submit" onclick="fixCheck()">
           <b>Start Arbitrage</b>
         </button>
       </div>
@@ -261,7 +261,7 @@
       <span ng-show="formStep == 3" style="display:block; width: auto; margin-bottom:-50px; overflow: visible;">
         <form class="lighting" style="background: #1a70e1; width: 450px; height: 120px;">
           <a style="color:#fff;font-size: 36px; float: right; padding-top: 18px;">
-            <div id="mybalance" style="display: inline;"></div> {{currency}}
+            <div style="display: inline;"></div> {{account.balance}} {{currency}}
           </a>
           <br />
           <a style="color:#fff;font-size: 13px;">Network:</a>
