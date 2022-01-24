@@ -35,7 +35,7 @@
     <div id="main">
       <div class="topnav">
         <a class="darking-logo" href="{{locationUrl}}" id="site" style="padding: 11px 0px;">
-          <img src="assets/image/logo/logo.png" id="logoImage" id="logo" width="50px" height="50px" style="float: none;">
+          <img src="assets/image/logo/logo.png" id="logoImage" width="50px" height="50px" style="float: none;">
         </a>
         <a href="{{scan}}gastracker" target="_blank">
         <button class="menu-button" style="height: 25px; display: inline;float: left;margin-left: 25px;margin-top: 0px;" onclick="_gasPrice()">
@@ -45,7 +45,7 @@
       </a>
         <div class="respomenu">
 
-          <button class="button-info menu-button" style="float:none;" onclick="menu1(), menu2_close(), getBalance(), getNetwork()">
+          <button class="button-info menu-button" style="float:none;" onclick="menu1(), menu2_close(), getBalance(), getNetwork(), tokenNetwork()">
             <img src="assets/image/metamask.png" id="logo" width="25px" height="25px" style="float: left; margin-right: 10px;">
             <div style="display: inline; font-size: 14px;">{{toplen}}...{{endlen}}</div>
             <div class="loaderTx" id="loaderTx"></div>
@@ -59,7 +59,7 @@
 
             <div style="height:10px"></div>
             <a style="font-size: 16px; font-weight: 800;text-align: left;">Your Wallet</a>
-            <a style="font-size: 15px; float: right;">Balance: <b><div id="mybalance" style="display: inline;"></div> <div id="currency" style="display: inline;"></div></b></a>
+            <a style="font-size: 15px; float: right;">Balance: <b><div id="mybalance" style="display: inline;"></div> <div id="currency" style="display: inline;"></div> <img id="logoNetwork" width="20px" height="20px" style="display: inline;"></b></a>
             <button class="addressBar" style="margin:0px 20px 20px 20px;">
               <div style="font-size: 14px;">{{account.address}}</div>
             </button>
