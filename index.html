@@ -126,7 +126,8 @@
     </div>
 
     <script>
-      document.getElementById('outer-div').addEventListener('click', function(){
+    document.getElementById('inner-div').addEventListener('click', function(e){
+      e.stopPropagation()
         menu1_close();
         menu2_close();
       });
