@@ -1026,7 +1026,7 @@ ul#menu li:hover {
   -webkit-animation: spin 2s linear infinite;
   /* Safari */
   animation: spin 2s linear infinite;
-  float: left;
+  float: right;
   margin-right: 36%;
   transform: translate(-50%, -50%);
 }
