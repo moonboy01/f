@@ -52,7 +52,7 @@
           
           <div id="Menu1" style="justify-content: right;display:none; background:transparent;width: 400px;float: right;">
             
-            <div style="font-size: 14px; background:#fff;margin-top: 15px;border-radius: 15px;padding-bottom: 10px;width: 400px;
+            <div id="outer-div" style="font-size: 14px; background:#fff;margin-top: 15px;border-radius: 15px;padding-bottom: 10px;width: 400px;
             position: fixed;margin-top: 70px;">
 
             <div style="height:10px"></div>
@@ -97,7 +97,7 @@
 
           <div id="Menu2" style="justify-content: right;display:none; background:transparent;width: 400px;float: right;" >
 
-            <div style="font-size: 14px; background:#fff;margin-top: 15px;border-radius: 15px;padding-bottom: 10px;width: 400px;
+            <div id="outer-div" style="font-size: 14px; background:#fff;margin-top: 15px;border-radius: 15px;padding-bottom: 10px;width: 400px;
             position: fixed;">
 
                   <div style="padding:10px 10px 0px 10px;display: revert">
@@ -124,6 +124,13 @@
         </div>
       </div>
     </div>
+
+    <script>
+      document.getElementById('outer-div').addEventListener('click', function(){
+        menu1_close();
+        menu2_close();
+      });
+    </script>
 
     <!-- INTRO -->
     <script>
@@ -160,7 +167,7 @@
           <div class="darking-list" style="background: transparent;max-width: 800px;text-align: center;">
             <h1 style="font-size: 37px; display: inline;">Welcome to <h1 style="display: inline; font-size: 40px;">
                 <p style="display: inline;" id="writer"></p>
-                <p style="display: inline;" class="blink">.</p>
+                <!-- <p style="display: inline;" class="blink">.</p> -->
               </h1>
             </h1>
             <p style="padding: 0px 15px;text-align: center;">The new first <b>NO CODE</b> arbitrage trading bot that leverage flash loans. <b>Enjoy risk free on-chain arbitrage opportunities</b>, automatic token selection, pair matching and routing on multiple blockchains. </p>
