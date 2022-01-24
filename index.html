@@ -20,7 +20,7 @@
       }, 3000);
     </script>
   </head>
-  <body class="body" ng-app="myApp" ng-controller="myCtrl" style="text-align: -webkit-center;" onload="disableSubmit(), _gasPrice()">
+  <body class="body" ng-app="myApp" ng-controller="myCtrl" style="text-align: -webkit-center;" id="outer-div" onload="disableSubmit(), _gasPrice()">
     <!-- ALERT -->
     <div class="alert-2">
       <span class="closebtn" style="margin-top: 2px;" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -52,7 +52,7 @@
           
           <div id="Menu1" style="justify-content: right;display:none; background:transparent;width: 400px;float: right;">
             
-            <div id="outer-div" style="font-size: 14px; background:#fff;margin-top: 15px;border-radius: 15px;padding-bottom: 10px;width: 400px;
+            <div style="font-size: 14px; background:#fff;margin-top: 15px;border-radius: 15px;padding-bottom: 10px;width: 400px;
             position: fixed;margin-top: 70px;">
 
             <div style="height:10px"></div>
@@ -97,7 +97,7 @@
 
           <div id="Menu2" style="justify-content: right;display:none; background:transparent;width: 400px;float: right;" >
 
-            <div id="outer-div" style="font-size: 14px; background:#fff;margin-top: 15px;border-radius: 15px;padding-bottom: 10px;width: 400px;
+            <div style="font-size: 14px; background:#fff;margin-top: 15px;border-radius: 15px;padding-bottom: 10px;width: 400px;
             position: fixed;">
 
                   <div style="padding:10px 10px 0px 10px;display: revert">
