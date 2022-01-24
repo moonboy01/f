@@ -31,7 +31,7 @@
     <!-- MENU -->
     <div id="main">
       <div class="topnav">
-        <div id="outer-div">
+        <div id="outer-div" onclick="menu1_close();menu2_close();">
         <a class="darking-logo" href="{{locationUrl}}" id="site" style="padding: 11px 0px;">
           <img src="assets/image/logo/logo.png" id="logoImage" id="logo" width="50px" height="50px" style="float: none;">
         </a>
@@ -134,9 +134,7 @@
       //id="outer-div"
     </script>
 
-<div id="outer-div" onclick="
-menu1_close();
-menu2_close();">
+<div id="outer-div" onclick="menu1_close();menu2_close();">
 
     <!-- INTRO -->
     <script>
@@ -236,9 +234,9 @@ menu2_close();">
       <p style="text-align:center;font-size: 14px;">- or put it manually -</p>
       <p style="padding-right: 18px; font-size: 16px;text-align: justify;">
       <div class="input-holder">
-        <input id="dropaddr" onclick="getBalance(), updateTokens()" type="text" placeholder="Token Address:" ng-model="erc20.address" maxlength="42" minlength="42" autofocus #dropaddr />
-        <input id="dropticker" onclick="getBalance(), updateTokens()" type="text" placeholder="Token Ticker:" ng-model="erc20.ticker" maxlength="12" #dropticker />
-        <input id="dropname" onclick="getBalance(), updateTokens()" type="text" placeholder="Token Name: (optional)" ng-model="erc20.name" maxlength="12" #dropname />
+        <input id="dropaddr" onclick="updateTokens()" type="text" placeholder="Token Address:" ng-model="erc20.address" maxlength="42" minlength="42" autofocus #dropaddr />
+        <input id="dropticker" onclick="updateTokens()" type="text" placeholder="Token Ticker:" ng-model="erc20.ticker" maxlength="12" #dropticker />
+        <input id="dropname" onclick="updateTokens()" type="text" placeholder="Token Name: (optional)" ng-model="erc20.name" maxlength="12" #dropname />
       </div>
       </p>
 
@@ -247,7 +245,7 @@ menu2_close();">
       </div>
 
       <div class="input-holder btn-holder">
-        <button class="button_getStarted" type="submit" onclick="fixCheck(), getBalance(), fixToken()">
+        <button class="button_getStarted" type="submit" onclick="fixCheck(), fixToken()">
           <b>Start Arbitrage</b>
         </button>
       </div>
