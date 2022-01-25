@@ -159,7 +159,7 @@
         }
       }
     </script>
-<div class="alert" style="background: #60ae5d; width: auto; display: inline-block;margin-bottom: 0px!important;">
+<div id="closeAlert" class="alert" style="background: #60ae5d; width: auto; display: inline-block;margin-bottom: 0px!important;">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
   <strong>Congratulations</strong>, successful execution!</br>
   <strong>Note: </strong> Take advantage of the Referral program to get even more!
@@ -216,7 +216,7 @@
     <a style="font-size: 12px; float: right; display: inline;" href="mailto:snapperfi@protonmail.com"><i class="fa fa-exclamation-triangle"> </i> Report Bug (support@snapper.fi)</a>  
       
     <div class="input-holder btn-holder">
-        <button class="button_getStarted" type="submit" name="submit" id="submit" onclick="fixCheck(), tokenImages(), referralInfo(), hidePartnerInfo(), getHomeLink(), getBalance()" disabled>
+        <button class="button_getStarted" type="submit" name="submit" id="submit" onclick="fixCheck(), tokenImages(), referralInfo(), hidePartnerInfo(), getHomeLink(), getBalance(), closeAlert()" disabled>
           <b>Get started</b>
         </button>
       </div>
