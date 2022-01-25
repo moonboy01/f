@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1"><meta name="description" content="Flash Loans are complex and boring, that's why we created Snapper & Snap Loans. Leverage Flash Loans & risk free arbitrage opportunities on multiple blockchains with a couple clicks. No coding skills required!">
+    <meta name="keywords" content="Flash Loan, Snapper, Crypto Arbitrage Bot, Snap Loan, Flash Loans, Snap Loans, Arbitrage Bot, Defi Hack, Defi, Crypto Loans, Crypto Arbitrage, Cryptocurrency, Avax Arbitrage, Avax Bot, Polygon Arbitrage, Polygon Bot, Matic Arbitrage, Matic Bot, Binance Bot, Binance Arbitrage, Binance, Trading, Trading Crypto Bot, Crypto Trading Bot, How To Do Flash Loans, BNB, ETH, Ethereum, Avalanche, Polygon, Matic">
     <title>Snapper App</title>
     <link rel="icon" type="image/png" href="assets/image/logo/logo.png">
     <link rel="stylesheet" href="./assets/css/styles.css">
@@ -19,8 +20,8 @@
         });
       }, 3000);
     </script>
-  </head>
-  <body class="body" ng-app="myApp" ng-controller="myCtrl" style="text-align: -webkit-center;" onload="disableSubmit(), _gasPrice()">
+     </head>
+  <body class="body" ng-app="myApp" ng-controller="myCtrl" style="text-align: -webkit-center;" onload="disableSubmit(), _gasPrice(), getBalance()">
     <!-- ALERT -->
     <div class="alert-2">
       <span class="closebtn" style="margin-top: 2px;" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -28,232 +29,124 @@
         <i class="fa fa-exclamation-triangle"></i> Be sure to access only by our verified link: <strong>https://snapper.fi/</strong>
       </div>
     </div>
+
+    <div id="outer-div" onclick="menu1_close();menu2_close();"><div style="margin-top: 100px;margin-bottom: -80px;"></div>
+    
+    <ul class="lighting-menu">
+      <div style="font-size: 20px;font-family: monospace;display: inline;"><a href="{{locationUrl}}" style="display: inline;"><b>Snapper</b>.fi</a></div>
+    </ul>
+    </div>
+
     <!-- MENU -->
-    <div id="main">
+    <div id="main" style="margin-top: -100px;">
       <div class="topnav">
         <a class="darking-logo" href="{{locationUrl}}" id="site" style="padding: 11px 0px;">
-          <img src="assets/image/logo/logo.png" id="logoImage" id="logo" width="50px" height="50px" style="float: none;">
+          <img src="assets/image/logo/logo.png" id="logoImage" width="0px" height="0px" style="float: none;">
+          <i class="fas fa-sync-alt update" href="{{locationUrl}}" style="font-size: 25px;margin-top: -5px;"></i>
         </a>
         <a href="{{scan}}gastracker" target="_blank">
-        <button class="menu-button" style="height: 25px; display: inline;float: left;margin-left: 25px;margin-top: 0px;" onclick="_gasPrice()">
-          <i class="fas fa-gas-pump" style="font-size: 17px;color: #8d8d8d;"></i>
-          <div style="display: inline; font-size: 17px;" id="gasEther"></div> 
-        </button>
-      </a>
-
+          <button class="menu-button" style="height: 25px; display: inline;float: left;margin-top: 0px;">
+            <i class="fas fa-gas-pump" style="font-size: 17px;" id="circle"></i>
+            <div style="display: inline; font-size: 17px;" id="gasEther"> gwei</div>
+          </button>
+        </a>
         <div class="respomenu">
-          <div style="display: inline" class="topnav-right">
-            <button class="button-info menu-button" id="info" style="float:none;">
-              <img src="assets/image/metamask.png" id="logo" width="25px" height="25px" style="float: left; margin-right: 10px;">
-              <div style="display: inline; font-size: 14px;">{{toplen}}...{{endlen}}</div>
-              <div class="loaderTx" id="loaderTx"></div>
-              <div id="loaderTxs" style="padding: 0px;display: inline;"></div>
+
+          <button class="button-info menu-button" style="float:none;" onclick="menu1(), menu2_close(), getBalance()">
+            <!-- <img src="assets/image/metamask.png" id="logo" width="25px" height="25px" style="float: left; margin-right: 10px;"> -->
+            <img id="logoNetwork" width="25px" height="25px" style="float: left; margin-right: 10px;">
+            <div style="display: inline; font-size: 14px;">{{toplen}}...{{endlen}}</div>
+            <div class="loaderTx" id="loaderTx"></div>
+            <div id="loaderTxs" style="padding: 0px;display: inline;"></div>
+          </button>
+          
+          <div id="Menu1" style="justify-content: right;display:none; background:transparent;width: 400px;float: right;">
+            
+            <div style="font-size: 14px; background:#fff;margin-top: 15px;border-radius: 15px;padding-bottom: 10px;width: 400px;position: fixed;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            margin-top: 70px;">
+
+            <div style="height:10px"></div>
+            <a style="font-size: 16px; font-weight: 800;text-align: left;">Your Wallet</a>
+            <a style="font-size: 15px; float: right;">Balance: <b><div id="mybalance_menu" style="display: inline;"></div> <div id="currency" style="display: inline;"></div> </b></a>
+            <button class="addressBar" style="margin:0px 20px 20px 20px;">
+              <div style="font-size: 14px;">{{account.address}}</div>
             </button>
-            <div id="myModal" class="modal">
-              <div class="modal-content" style="width: 600px; height: 370px;padding-bottom: 30px;">
-                <span class="close">&times;</span>
-                <h1 style="font-size: 20px; margin-top: 50px;padding: 25px; padding-top: 40px; padding-bottom: 10px; font-weight: 800;text-align: left;">Your Wallet</h1>
-                <hr class="new1" />
-                <button class="addressBar">
-                  <div style="font-size: 20px;">{{account.address}}</div>
-                </button>
-                <div style="padding: 0px 20%;width: 100%;">
-                  <a href="{{scan}}address/{{account.address}}" style="font-size: 18px;">Check on {{idscan}}
-                    <i class="fa fa-check-square-o"></i>
-                  </a>
-                  <a onclick="copyRef()" style="font-size: 18px;">Copy Address <i class="fa fa-clone"></i>
-                  </a>
-                  <a id="input" style="font-size: 0px; height: 0px;">{{account.address}}</a>
-                </div>
-                <hr class="new1" style="margin-top: 70px;" />
-                <h1 style="font-size: 20px;font-weight: 800;display: inline;float: left;padding-left: 25px;">Your Referral link</h1>
-                <a style="font-size: 15px; float: right; margin-bottom: 20px;color:#60AE5D" href="referral.html{{locationRefUrl}}">Referral Stats</a>
-                <table class="form-table-b2" style="background-color: rgb(240, 240, 240);box-shadow: none;width: 94%;border-radius: 15px;margin-left: 3%;">
-                  <tr>
-                    <td>
-                      <!-- <a onclick="copyRef3()" style="font-size: 14px;float: left;margin-top: 4px;margin-left: 15px;color: #363636;">https://snapper.fi/?= <div style="display: inline;">{{locRefShort}}{{toplenShort}}...{{endlenShort}}</div>
+            <a style="padding:0px;">
+              <a href="{{scan}}address/{{account.address}}" style="font-size: 14px;padding-top: 0px;">Check on <div id="network" style="display: inline;"></div>
+                <i class="fa fa-check-square-o"></i>
+              </a>
+              <a onclick="copyRef()" style="font-size: 14px;padding-top: 0px;float: right;">Copy Address <i class="fa fa-clone"></i>
+              </a>
+              <a id="input" style="font-size: 0px; height: 0px;padding: 0px;">{{account.address}}</a>
+            </a>
+            <hr class="new1" style="margin-top: 35px;" />
+
+            <a style="font-size: 16px;font-weight: 800;display: inline;float: left;padding-left: 25px;">Your Referral link</a>
+            <a style="font-size: 15px; float: right;color:#60AE5D" href="referral.html{{locationRefUrl}}">Referral Stats</a>
+
+
+            <table class="form-table-b2" style="background-color: rgb(240, 240, 240);box-shadow: none;width: 360px;border-radius: 15px;margin: 0px 20px;">
+              <tr>
+                <td>
+                  <!-- <a onclick="copyRef3()" style="font-size: 14px;float: left;margin-top: 4px;margin-left: 15px;color: #363636;">https://snapper.fi/?= <div style="display: inline;">{{locRefShort}}{{toplenShort}}...{{endlenShort}}</div>
                       </a> -->
                       <input onclick="copyRef3()" style="font-size: 14px;float: left;margin-top: 4px;margin-left: 15px;color: #363636; max-width: 220px;">https://snapper.fi/?= <div style="display: inline;">{{locRefShort}}{{toplenShort}}...{{endlenShort}}</div>
                     </input>
-                      <a id="input3" style="font-size: 0px; height: 0px;">https://snapper.fi/?= <div>{{locationRefUrlFixedMulti}}{{account.address}}</div>
-                      </a>
-                      <button onclick="copyRef3(), plausible('copy_referral')" style="float: right;width: auto; font-size: 14px;font-weight: 700;color: #fff;background-color: #60AE5D;padding: 15px; height: 20px; border-radius: 15px ;">Copy</button>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-            <script>
-              function copyRef(id) {
-                var r = document.createRange();
-                r.selectNode(document.getElementById("input"));
-                window.getSelection().removeAllRanges();
-                window.getSelection().addRange(r);
-                document.execCommand('copy');
-                window.getSelection().removeAllRanges();
-                return alert("Address copied successfully!");
-              }
+                  <a id="input3" style="font-size: 0px; height: 0px;">https://snapper.fi/?= <div>{{locationRefUrlFixedMulti}}{{account.address}}</div>
+                  </a>
+                  <button onclick="copyRef3(), plausible('copy_referral')" style="float: right;width: auto; font-size: 14px;font-weight: 700;color: #fff;background-color: #60AE5D;padding: 15px; height: 20px; border-radius: 15px ;">Copy</button>
+                </td>
+              </tr>
+            </table>
 
-              function copyRef3(id) {
-                var r = document.createRange();
-                r.selectNode(document.getElementById("input3"));
-                window.getSelection().removeAllRanges();
-                window.getSelection().addRange(r);
-                document.execCommand('copy');
-                window.getSelection().removeAllRanges();
-                return alert("Referral copied successfully!");
-              }
-              var modal2 = document.getElementById("myModal");
-              var btn2 = document.getElementById("info");
-              var span2 = document.getElementsByClassName("close")[0];
-              btn2.onclick = function() {
-                modal2.style.display = "block";
-              }
-              span2.onclick = function() {
-                modal2.style.display = "none";
-              }
-              window.onclick = function(event) {
-                if (event.target == modal2) {
-                  modal2.style.display = "none";
-                }
-              }
-            </script>
+
           </div>
-          <!-- LIST -->
-          <div style="display: inline" class="topnav-right">
-            <div style="margin-top: 50px; display: inline;"></div>
-            <button class="accordion menu-button" style="height: 25px;">List <i class="fa fa-chevron-down"></i>
-            </button>
-            <div class="panel">
-              <form class="networkList">
-                <div class="lighting" style="padding: 0px;">
-                  <table class="test" style="width:100%;margin-left: 10px;" id='myTable2'>
-                    <tr>
-                      <td>
-                        <a target="_blank" href="https://etherscan.io/tokens">
-                          <img src="assets/image/eth.png" width="35px" height="35px">
-                        </a>
-                      </td>
-                      <td style="padding-right: 20px;">Ethereum</td>
-                      <td>
-                        <button style="width:125px;border-radius: 10px;padding: 0px;">
-                          <div style="text-align: center;padding: 10px 0px;">
-                            <a target="_blank" href="https://etherscan.io/tokens" style="color: white;float: none;">Etherscan</a>
-                          </div>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a target="_blank" href="https://bscscan.com/tokens">
-                          <img src="assets/image/bnb.png" width="35px" height="35px">
-                        </a>
-                      </td>
-                      <td>Binance</td>
-                      <td>
-                        <button style="width:125px;border-radius: 10px;padding: 0px;">
-                          <div style="text-align: center;padding: 10px 0px;">
-                            <a target="_blank" href="https://bscscan.com/tokens" style="color: white;float: none;">Bscscan</a>
-                          </div>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a target="_blank" href="https://polygonscan.com/tokens">
-                          <img style="border-radius: 25px" src="assets/image/matic.png" width="35px" height="35px">
-                        </a>
-                      </td>
-                      <td>Polygon</td>
-                      <td>
-                        <button style="width:125px;border-radius: 10px;padding: 0px; margin-right:20px">
-                          <div style="text-align: center;padding: 10px 0px;">
-                            <a target="_blank" href="https://polygonscan.com/tokens" style="color: white;float: none;">Polygonscan</a>
-                          </div>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a target="_blank" href="https://snowtrace.io/tokens">
-                          <img src="assets/image/avax.png" width="35px" height="35px">
-                        </a>
-                      </td>
-                      <td style="padding-right: 20px;">Avalanche</td>
-                      <td>
-                        <button style="width:125px;border-radius: 10px;padding: 0px;">
-                          <div style="text-align: center;padding: 10px 0px;">
-                            <a target="_blank" href="https://snowtrace.io/tokens" style="color: white;float: none;">Snowtrace</a>
-                          </div>
-                        </button>
-                      </td>
-                    </tr>
-                  </table>
-                  <script>
-                    function searchTable() {
-                      var input, filter, found, table, tr, td, i, j;
-                      input = document.getElementById("myInput-base");
-                      filter = input.value.toUpperCase();
-                      table = document.getElementById("myTable2");
-                      tr = table.getElementsByTagName("tr");
-                      for (i = 0; i < tr.length; i++) {
-                        td = tr[i].getElementsByTagName("td");
-                        for (j = 0; j < td.length; j++) {
-                          if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
-                            found = true;
-                          }
-                        }
-                        if (found) {
-                          tr[i].style.display = "";
-                          found = false;
-                        } else {
-                          tr[i].style.display = "none";
-                        }
-                      }
-                    }
+        </div>
 
-                    function myFunction() {
-                      var copyText = document.getElementById("myInput");
-                      copyText.select();
-                      copyText.setSelectionRange(0, 99999);
-                      document.execCommand("copy");
-                      alert("Copied the text: " + copyText.value);
-                    }
-                  </script>
-                  <div class="space10"></div>
-                </div>
-              </form>
-            </div>
-            <script>
-              var acc = document.getElementsByClassName("accordion");
-              var i;
-              for (i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
-                  this.classList.toggle("active");
-                  var panel = this.nextElementSibling;
-                  if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                  } else {
-                    panel.style.display = "block";
-                  }
-                });
-              }
-            </script>
-            <!-- ENDLIST -->
+
+          <button class="accordion menu-button" style="height: 25px;" onclick="menu2(), menu1_close()">Token List <i class="fa fa-chevron-down"></i>
+          </button>
+
+          <div id="Menu2" style="justify-content: right;display:none; background:transparent;width: 400px;float: right;" >
+
+            <div style="font-size: 14px; background:#fff;margin-top: 15px;border-radius: 15px;padding-bottom: 10px;width: 400px;position: fixed;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+
+                  <div style="padding:10px 10px 0px 10px;display: revert">
+                      <a style="padding: 0px;"><img src="assets/image/eth.png" width="35px" height="35px"><a style="padding: 0px 0px 0px 20px;">Ethereum </br><b style="font-size: 12px;float: left;">id: 1</b></a>
+                      <a target="_blank" href="https://etherscan.io/tokens" style="color: white;float: none;"><button class="buttonList" style="background:#627eea">Etherscan</button></a></a>
+                    </div></br>
+                      
+                  <div style="padding:10px 10px 0px 10px;display: revert">
+                    <a style="padding: 0px;"><img style="vertical-align: middle;" src="assets/image/bnb.png" width="35px" height="35px"><a style="padding: 0px 0px 0px 20px;">Binance </br><b style="font-size: 12px;float: left;">id: 56</b></a>
+                    <a target="_blank" href="https://bscscan.com/tokens" style="color: white;float: none;">  <button class="buttonList" style="background:#f3ba2f">Bscscan</button></a></a>
+                  </div></br>
+
+                  <div style="padding:10px 10px 0px 10px;display: revert">
+                    <a style="padding: 0px;"><img style="vertical-align: middle;border-radius: 25px" src="assets/image/matic.png" width="35px" height="35px"><a style="padding: 0px 0px 0px 20px;">Polygon </br><b style="font-size: 12px;float: left;">id: 137</b></a>
+                     <a target="_blank" href="https://polygonscan.com/tokens" style="color: white;float: none;"> <button class="buttonList" style="background:#8247e5">Polygonscan</button></a></a>
+                      </div></br>
+
+                  <div style="padding:10px; margin-bottom: -25px;display: revert">
+                    <a style="padding: 0px;"><img style="vertical-align: middle;" src="assets/image/avax.png" width="35px" height="35px"><a style="padding: 0px 0px 0px 20px;">Avalanche </br><b style="font-size: 12px;float: left;">id: 43114</b></a>
+                     <a target="_blank" href="https://snowtrace.io/tokens" style="color: white;float: none;"> <button class="buttonList" style="background:#e84142">Snowtrace</button></a></a>
+                      </div>
+                    </div>
           </div>
         </div>
       </div>
     </div>
+
     <script>
-      function myFunction() {
-        var x = document.getElementById("myLinks");
-        if (x.style.display === "block") {
-          x.style.display = "none";
-        } else {
-          x.style.display = "block";
-        }
-      }
+    document.getElementById('outer-div').addEventListener('click', function(e){
+      e.stopPropagation()
+        menu1_close();
+        menu2_close();
+      });
+      //id="outer-div"
     </script>
+
+<div id="outer-div" onclick="menu1_close();menu2_close();">
+  <div style="padding-top:100px"></div>
     <!-- INTRO -->
     <script>
       var i = 0;
@@ -270,7 +163,7 @@
     </script>
 
     <!-- STEP 1 -->
-    <form class="lighting" style="position: relative; width: 450px;margin-top: 40px;" ng-show="formStep == 1" ng-submit="getStarted()">
+    <form class="lighting" style=" width: 450px;margin-top: 40px;" ng-show="formStep == 1" ng-submit="getStarted()">
       <div class="center" style="padding-top:15px" hidden>
         <div class="cc-selector" style="display: inline; margin-right: 10px;">
           <label class="super">Select Network:</label>
@@ -289,10 +182,11 @@
           <div class="darking-list" style="background: transparent;max-width: 800px;text-align: center;">
             <h1 style="font-size: 37px; display: inline;">Welcome to <h1 style="display: inline; font-size: 40px;">
                 <p style="display: inline;" id="writer"></p>
-                <p style="display: inline;" class="blink">.</p>
+                <!-- <p style="display: inline;" class="blink">.</p> -->
               </h1>
             </h1>
-            <p style="padding: 0px 15px;text-align: center;">The new first <b>NO CODE</b> arbitrage trading bot that leverage flash loans. <b>Enjoy risk free on-chain arbitrage opportunities</b>, automatic token selection, pair matching and routing on multiple blockchains. </p>
+            <p style="padding: 0px 0px;text-align: center; font-size:14px">
+             <b>Flash Loans are complex and boring</b>, that's why we created Snapper & Snap Loans. Leverage Flash Loans & risk free arbitrage opportunities on multiple blockchains with a couple clicks. </br><b>No coding skills required!</b></p>
           </div>
         </table> 
         <div style="text-align: center; padding-bottom:20px;font-family: monospace;">
@@ -314,13 +208,13 @@
     <a style="font-size: 12px; float: right; display: inline;" href="mailto:snapperfi@protonmail.com"><i class="fa fa-exclamation-triangle"> </i> Report Bug (support@snapper.fi)</a>  
       
     <div class="input-holder btn-holder">
-        <button class="button_getStarted" type="submit" name="submit" id="submit" onclick="fixCheck(), getBalance(), tokenImages(), referralInfo(), hidePartnerInfo(), getHomeLink()" disabled>
+        <button class="button_getStarted" type="submit" name="submit" id="submit" onclick="fixCheck(), tokenImages(), referralInfo(), hidePartnerInfo(), getHomeLink(), getBalance()" disabled>
           <b>Get started</b>
         </button>
       </div>
     </form>
     <!-- STEP 1.2 -->
-    <form class="darking block" style="position: relative; width: 450px;" ng-show="formStep == 2" ng-submit="submitNetwork()">
+    <form class="darking block" style=" width: 450px;" ng-show="formStep == 2" ng-submit="submitNetwork()">
       <div class="input-holder">
         <div class="dropdown">
           <div onclick="mydrop(), tokenImages()" class="dropbtn" style="text-align: center; border-radius: 21px 21px 0px 0px; margin-left: -10px; margin-right: -10px;">Top Token List <i class="fa fa-chevron-down"></i>
@@ -349,12 +243,12 @@
           </div>
         </div>
       </div>
-      <p style="text-align:center;font-size: 14px;">- or put it manually -</p>
+      <p style="text-align:center;font-size: 14px;">- or insert it manually -</p>
       <p style="padding-right: 18px; font-size: 16px;text-align: justify;">
       <div class="input-holder">
-        <input id="dropaddr" onclick="getBalance(), updateTokens()" type="text" placeholder="Token Address:" ng-model="erc20.address" maxlength="42" minlength="42" autofocus #dropaddr />
-        <input id="dropticker" onclick="getBalance(), updateTokens()" type="text" placeholder="Token Ticker:" ng-model="erc20.ticker" maxlength="12" #dropticker />
-        <input id="dropname" onclick="getBalance(), updateTokens()" type="text" placeholder="Token Name: (optional)" ng-model="erc20.name" maxlength="12" #dropname />
+        <input id="dropaddr" onclick="updateTokens()" type="text" placeholder="Token Address:" ng-model="erc20.address" maxlength="42" minlength="42" autofocus #dropaddr />
+        <input id="dropticker" onclick="updateTokens()" type="text" placeholder="Token Ticker:" ng-model="erc20.ticker" maxlength="12" #dropticker />
+        <input id="dropname" onclick="updateTokens()" type="text" placeholder="Token Name: (optional)" ng-model="erc20.name" maxlength="12" #dropname />
       </div>
       </p>
 
@@ -363,7 +257,7 @@
       </div>
 
       <div class="input-holder btn-holder">
-        <button class="button_getStarted" type="submit" onclick="fixCheck(), getBalance(), fixToken()">
+        <button class="button_getStarted" type="submit" onclick="fixCheck()">
           <b>Start Arbitrage</b>
         </button>
       </div>
@@ -375,10 +269,10 @@
       }, 20000);
     </script>
     <div id="in-2" hidden>
-      <span ng-show="formStep == 3" style="display:block; width: auto; margin-bottom:-50px; overflow: visible;position: relative;">
+      <span ng-show="formStep == 3" style="display:block; width: auto; margin-bottom:-50px; overflow: visible;">
         <form class="lighting" style="background: #1a70e1; width: 450px; height: 120px;">
           <a style="color:#fff;font-size: 36px; float: right; padding-top: 18px;">
-            <div id="mybalance" style="display: inline;"></div> {{currency}}
+            <div style="display: inline;"></div> {{account.balance}} {{currency}}
           </a>
           <br />
           <a style="color:#fff;font-size: 13px;">Network:</a>
@@ -392,44 +286,8 @@
       </span>
     </div>
     <!-- WAITING -->
-    <form class="form-table darking block" style="position: relative; width: 450px;" ng-show="formStep == 3" ng-submit="submitLoanForm()">
-      <style>
-        .loader {
-          border: 10px solid #60AE5D;
-          border-radius: 100%;
-          border-top: 10px solid rgb(240, 240, 240);
-          width: 125px;
-          height: 125px;
-          -webkit-animation: spin 2s linear infinite;
-          /* Safari */
-          animation: spin 2s linear infinite;
-          float: none;
-          position: absolute;
-          left: 36%;
-          transform: translate(-50%, -50%);
-        }
+    <form class="form-table darking block" style=" width: 450px;" ng-show="formStep == 3" ng-submit="submitLoanForm()">
 
-        /* Safari */
-        @-webkit-keyframes spin {
-          0% {
-            -webkit-transform: rotate(0deg);
-          }
-
-          100% {
-            -webkit-transform: rotate(360deg);
-          }
-        }
-
-        @keyframes spin {
-          0% {
-            transform: rotate(0deg);
-          }
-
-          100% {
-            transform: rotate(360deg);
-          }
-        }
-      </style>
       <script type="text/javascript">
         window.setTimeout("Tick()", 1000);
 
@@ -640,7 +498,7 @@
     <div class="space10"></div>
     <!-- FOOTER -->
     <ul class="lighting-menu">
-      <div class="tooltip" style="border-bottom: 0px dotted #000;position: relative;">
+      <div class="tooltip" style="border-bottom: 0px dotted #000;">
         <a class="lighting-menu" style="font-size: 12px;display: contents;">
           <p>WebSocket: <a style="color: rgb(85, 170, 0);font-size: 12px;display: contents;">
               <i class="fa fa-circle"></i> Connected </a>
@@ -673,9 +531,13 @@
           </div>
       </a>
     </ul>
+
+
+  </div>
+
     <!-- SCRIPTS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js"></script>
-    <script src="https://cdn.ethers.io/scripts/ethers-v4.min.js" charset="utf-8" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.5/web3.min.js"></script>
+   <!--  <script src="https://cdn.ethers.io/scripts/ethers-v4.min.js" charset="utf-8" type="text/javascript"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     <script src="./assets/js/chain.min.js"></script>
     <script src="./assets/js/addr.min.js"></script>
