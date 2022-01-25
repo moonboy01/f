@@ -93,6 +93,7 @@
 
 html {
   height: auto;
+  visibility:hidden;
 }
 form {
   padding: 30px;
