@@ -20,8 +20,23 @@
     </script>
   </head>
   <body class="body" ng-app="myApp" ng-controller="myCtrl" style="text-align: -webkit-center;">
+    <!-- ALERT -->
+    <div class="alert-2">
+      <span class="closebtn" style="margin-top: 2px;" onclick="this.parentElement.style.display='none';">&times;</span>
+      <div style="padding-top:5px">
+        <i class="fa fa-exclamation-triangle"></i> Be sure to access only by our verified link: <strong>https://snapper.fi/</strong>
+      </div>
+    </div>
+
+    <div id="outer-div" onclick="menu1_close();menu2_close();"><div style="margin-top: 100px;margin-bottom: -80px;"></div>
+    
+    <ul class="lighting-menu">
+      <div style="font-size: 20px;font-family: monospace;display: inline;"><a href="{{locationUrl}}" style="display: inline;"><b>Snapper</b>.fi</a></div>
+    </ul>
+    </div>
+
     <!-- MENU -->
-    <div id="main" style="margin-top: 0px;">
+    <div id="main" style="margin-top: -100px;">
       <div class="topnav">
         <a class="darking-logo" href="{{locationUrl}}" id="site" style="padding: 11px 0px;">
           <img src="assets/image/logo/logo.png" id="logoImage" width="0px" height="0px" style="float: none;">
@@ -125,6 +140,10 @@
       });
       //id="outer-div"
     </script>
+
+<div id="outer-div" onclick="menu1_close();menu2_close();">
+  <div style="padding-top:100px"></div>
+    <!-- INTRO -->
     <!-- REFERRAL INTRO -->
     <div style="height: 100px;"></div>
     <div>
@@ -332,7 +351,7 @@
           </div>
       </a>
     </ul>
-
+  </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.5/web3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
