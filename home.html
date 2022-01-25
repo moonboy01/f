@@ -88,19 +88,61 @@
             <table class="form-table-b2" style="background-color: rgb(240, 240, 240);box-shadow: none;width: 360px;border-radius: 15px;margin: 0px 20px;">
               <tr>
                 <td>
-                  <a onclick="copyRef3()" style="font-size: 14px;float: left;margin-top: 4px;margin-left: 15px;color: #363636;">https://snapper.fi/?= <div style="display: inline;">{{locRefShort}}{{toplenShort}}...{{endlenShort}}</div>
-                  </a>
+                  <a onclick="copyRef3()" style="font-size: 14px;float: left;margin-top: 4px;margin-left: 0px; color: #363636;max-width: 220px;max-inline-size: none;height: 20px;">https://snapper.fi/?= <div style="display: inline;">{{locRefShort}}{{toplenShort}}...{{endlenShort}}</div>
+                      </a>
                   <a id="input3" style="font-size: 0px; height: 0px;">https://snapper.fi/?= <div>{{locationRefUrlFixedMulti}}{{account.address}}</div>
                   </a>
-                  <button onclick="copyRef3(), plausible('copy_referral')" style="float: right;width: auto; font-size: 14px;font-weight: 700;color: #fff;background-color: #60AE5D;padding: 15px; height: 20px; border-radius: 15px ;">Copy</button>
+                  <button onclick="copyRef3(), plausible('copy_referral')" style="width: 35px;
+                  font-size: 14px;
+                  font-weight: 700;
+                  color: #fff;
+                  background-color: #60AE5D;
+                  border-radius: 15px;
+                  position: fixed;
+                  padding: 20PX;
+                  margin-left: -75px;
+                  height: 12px;">Copy</button>
                 </td>
               </tr>
             </table>
-
-
           </div>
         </div>
 
+        <script>
+          function copyRef(id) {
+            var r = document.createRange();
+            r.selectNode(document.getElementById("input"));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(r);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            return alert("Address copied successfully!");
+          }
+
+          function copyRef3(id) {
+            var r = document.createRange();
+            r.selectNode(document.getElementById("input3"));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(r);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            return alert("Referral copied successfully!");
+          }
+          var modal2 = document.getElementById("myModal");
+          var btn2 = document.getElementById("info");
+          var span2 = document.getElementsByClassName("close")[0];
+          btn2.onclick = function() {
+            modal2.style.display = "block";
+          }
+          span2.onclick = function() {
+            modal2.style.display = "none";
+          }
+          window.onclick = function(event) {
+            if (event.target == modal2) {
+              modal2.style.display = "none";
+            }
+          }
+        </script>
 
           <button class="accordion menu-button" style="height: 25px;" onclick="menu2(), menu1_close()">Token List <i class="fa fa-chevron-down"></i>
           </button>
