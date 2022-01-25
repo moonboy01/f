@@ -88,11 +88,20 @@
             <table class="form-table-b2" style="background-color: rgb(240, 240, 240);box-shadow: none;width: 360px;border-radius: 15px;margin: 0px 20px;">
               <tr>
                 <td>
-                  <a onclick="copyRef3()" style="font-size: 14px;float: left;margin-top: 4px;margin-left: 0px; color: #363636;max-width: 220px;height: 0px;;">https://snapper.fi/?= <div style="display: inline;">{{locRefShort}}{{toplenShort}}...{{endlenShort}}</div>
+                  <a onclick="copyRef3()" style="font-size: 14px;float: left;margin-top: 4px;margin-left: 0px; color: #363636;max-width: 220px;max-inline-size: none;height: 20px;">https://snapper.fi/?= <div style="display: inline;">{{locRefShort}}{{toplenShort}}...{{endlenShort}}</div>
                       </a>
                   <a id="input3" style="font-size: 0px; height: 0px;">https://snapper.fi/?= <div>{{locationRefUrlFixedMulti}}{{account.address}}</div>
                   </a>
-                  <button onclick="copyRef3(), plausible('copy_referral')" style="float: right;width: auto; font-size: 14px;font-weight: 700;color: #fff;background-color: #60AE5D;padding: 15px; height: 20px; border-radius: 15px ;">Copy</button>
+                  <button onclick="copyRef3(), plausible('copy_referral')" style="width: 35px;
+                  font-size: 14px;
+                  font-weight: 700;
+                  color: #fff;
+                  background-color: #60AE5D;
+                  border-radius: 15px;
+                  position: fixed;
+                  padding: 20PX;
+                  margin-left: -75px;
+                  height: 12px;">Copy</button>
                 </td>
               </tr>
             </table>
