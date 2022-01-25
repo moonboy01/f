@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1"><meta name="description" content="Flash Loans are complex and boring, that's why we created Snapper & Snap Loans. Leverage Flash Loans & risk free arbitrage opportunities on multiple blockchains with a couple clicks. No coding skills required!">
+    <meta name="keywords" content="Flash Loan, Snapper, Crypto Arbitrage Bot, Snap Loan, Flash Loans, Snap Loans, Arbitrage Bot, Defi Hack, Defi, Crypto Loans, Crypto Arbitrage, Cryptocurrency, Avax Arbitrage, Avax Bot, Polygon Arbitrage, Polygon Bot, Matic Arbitrage, Matic Bot, Binance Bot, Binance Arbitrage, Binance, Trading, Trading Crypto Bot, Crypto Trading Bot, How To Do Flash Loans, BNB, ETH, Ethereum, Avalanche, Polygon, Matic">
     <title>Snapper App</title>
     <link rel="icon" type="image/png" href="assets/image/logo/logo.png">
     <link rel="stylesheet" href="./assets/css/styles.css">
@@ -19,8 +20,8 @@
         });
       }, 3000);
     </script>
-  </head>
-  <body class="body" ng-app="myApp" ng-controller="myCtrl" style="text-align: -webkit-center;" onload="disableSubmit(), _gasPrice()">
+     </head>
+  <body class="body" ng-app="myApp" ng-controller="myCtrl" style="text-align: -webkit-center;" onload="disableSubmit(), _gasPrice(), getBalance()">
     <!-- ALERT -->
     <div class="alert-2">
       <span class="closebtn" style="margin-top: 2px;" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -29,24 +30,31 @@
       </div>
     </div>
 
-    <div id="outer-div" onclick="menu1_close();menu2_close();"><div style="margin-top: 100px;margin-bottom: -80px;"></div></div>
+    <div id="outer-div" onclick="menu1_close();menu2_close();"><div style="margin-top: 100px;margin-bottom: -80px;"></div>
+    
+    <ul class="lighting-menu">
+      <div style="font-size: 20px;font-family: monospace;display: inline;"><a href="{{locationUrl}}" style="display: inline;"><b>Snapper</b>.fi</a></div>
+    </ul>
+    </div>
 
     <!-- MENU -->
-    <div id="main">
+    <div id="main" style="margin-top: -100px;">
       <div class="topnav">
         <a class="darking-logo" href="{{locationUrl}}" id="site" style="padding: 11px 0px;">
-          <img src="assets/image/logo/logo.png" id="logoImage" width="50px" height="50px" style="float: none;">
+          <img src="assets/image/logo/logo.png" id="logoImage" width="0px" height="0px" style="float: none;">
+          <i class="fas fa-sync-alt update" href="{{locationUrl}}" style="font-size: 25px;margin-top: -5px;"></i>
         </a>
         <a href="{{scan}}gastracker" target="_blank">
-        <button class="menu-button" style="height: 25px; display: inline;float: left;margin-left: 25px;margin-top: 0px;">
-          <i class="fas fa-gas-pump" style="font-size: 17px;" id="circle"></i>
-          <div style="display: inline; font-size: 17px;" id="gasEther"> gwei</div>
-        </button>
-      </a>
+          <button class="menu-button" style="height: 25px; display: inline;float: left;margin-top: 0px;">
+            <i class="fas fa-gas-pump" style="font-size: 17px;" id="circle"></i>
+            <div style="display: inline; font-size: 17px;" id="gasEther"> gwei</div>
+          </button>
+        </a>
         <div class="respomenu">
 
           <button class="button-info menu-button" style="float:none;" onclick="menu1(), menu2_close(), getBalance()">
-            <img src="assets/image/metamask.png" id="logo" width="25px" height="25px" style="float: left; margin-right: 10px;">
+            <!-- <img src="assets/image/metamask.png" id="logo" width="25px" height="25px" style="float: left; margin-right: 10px;"> -->
+            <img id="logoNetwork" width="25px" height="25px" style="float: left; margin-right: 10px;">
             <div style="display: inline; font-size: 14px;">{{toplen}}...{{endlen}}</div>
             <div class="loaderTx" id="loaderTx"></div>
             <div id="loaderTxs" style="padding: 0px;display: inline;"></div>
@@ -59,7 +67,7 @@
 
             <div style="height:10px"></div>
             <a style="font-size: 16px; font-weight: 800;text-align: left;">Your Wallet</a>
-            <a style="font-size: 15px; float: right;">Balance: <b><div id="mybalance_menu" style="display: inline;"></div> <div id="currency" style="display: inline;"></div> <img id="logoNetwork" width="20px" height="20px" style="display: inline;vertical-align: middle;margin-top: -5px;"></b></a>
+            <a style="font-size: 15px; float: right;">Balance: <b><div id="mybalance_menu" style="display: inline;"></div> <div id="currency" style="display: inline;"></div> </b></a>
             <button class="addressBar" style="margin:0px 20px 20px 20px;">
               <div style="font-size: 14px;">{{account.address}}</div>
             </button>
@@ -94,7 +102,7 @@
         </div>
 
 
-          <button class="accordion menu-button" style="height: 25px;" onclick="menu2(), menu1_close()">List <i class="fa fa-chevron-down"></i>
+          <button class="accordion menu-button" style="height: 25px;" onclick="menu2(), menu1_close()">Token List <i class="fa fa-chevron-down"></i>
           </button>
 
           <div id="Menu2" style="justify-content: right;display:none; background:transparent;width: 400px;float: right;" >
@@ -151,7 +159,6 @@
         }
       }
     </script>
-
 <div class="alert" style="background: #0ba017; width: auto; display: inline-block;margin: 0 30%;margin-top: -50px ;margin-bottom: 50px!important;margin-top: -50px;">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
   <strong>Congratulations</strong>, successful execution!</br>
@@ -163,7 +170,6 @@
   <strong>Error: </strong> It looks like you've got unpending balance please make the deposit again to get all the balance unclaimed. If the transaction will be successfull you will receive the arbitrage profits plus the fees from last attempt. </br>
   <strong>Note: </strong> To prevent front-run it is recommended to make a bigger deposit.
 </div> -->
-
     <!-- STEP 1 -->
     <form class="lighting" style=" width: 450px;margin-top: 40px;" ng-show="formStep == 1" ng-submit="getStarted()">
       <div class="center" style="padding-top:15px" hidden>
@@ -187,7 +193,8 @@
                 <!-- <p style="display: inline;" class="blink">.</p> -->
               </h1>
             </h1>
-            <p style="padding: 0px 15px;text-align: center;">The new first <b>NO CODE</b> arbitrage trading bot that leverage flash loans. <b>Enjoy risk free on-chain arbitrage opportunities</b>, automatic token selection, pair matching and routing on multiple blockchains. </p>
+            <p style="padding: 0px 0px;text-align: center; font-size:14px">
+             <b>Flash Loans are complex and boring</b>, that's why we created Snapper & Snap Loans. Leverage Flash Loans & risk free arbitrage opportunities on multiple blockchains with a couple clicks. </br><b>No coding skills required!</b></p>
           </div>
         </table> 
         <div style="text-align: center; padding-bottom:20px;font-family: monospace;">
@@ -244,7 +251,7 @@
           </div>
         </div>
       </div>
-      <p style="text-align:center;font-size: 14px;">- or put it manually -</p>
+      <p style="text-align:center;font-size: 14px;">- or insert it manually -</p>
       <p style="padding-right: 18px; font-size: 16px;text-align: justify;">
       <div class="input-holder">
         <input id="dropaddr" onclick="updateTokens()" type="text" placeholder="Token Address:" ng-model="erc20.address" maxlength="42" minlength="42" autofocus #dropaddr />
