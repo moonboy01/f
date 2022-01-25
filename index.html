@@ -105,11 +105,44 @@
                 </td>
               </tr>
             </table>
-
-
           </div>
         </div>
 
+        <script>
+          function copyRef(id) {
+            var r = document.createRange();
+            r.selectNode(document.getElementById("input"));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(r);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            return alert("Address copied successfully!");
+          }
+
+          function copyRef3(id) {
+            var r = document.createRange();
+            r.selectNode(document.getElementById("input3"));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(r);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            return alert("Referral copied successfully!");
+          }
+          var modal2 = document.getElementById("myModal");
+          var btn2 = document.getElementById("info");
+          var span2 = document.getElementsByClassName("close")[0];
+          btn2.onclick = function() {
+            modal2.style.display = "block";
+          }
+          span2.onclick = function() {
+            modal2.style.display = "none";
+          }
+          window.onclick = function(event) {
+            if (event.target == modal2) {
+              modal2.style.display = "none";
+            }
+          }
+        </script>
 
           <button class="accordion menu-button" style="height: 25px;" onclick="menu2(), menu1_close()">Token List <i class="fa fa-chevron-down"></i>
           </button>
