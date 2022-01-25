@@ -35,18 +35,19 @@
     <div id="main">
       <div class="topnav">
         <a class="darking-logo" href="{{locationUrl}}" id="site" style="padding: 11px 0px;">
-          <img src="assets/image/logo/logo.png" id="logoImage" width="50px" height="50px" style="float: none;">
+          <!-- <img src="assets/image/logo/logo.png" id="logoImage" width="50px" height="50px" style="float: none;">  -->
         </a>
         <a href="{{scan}}gastracker" target="_blank">
-        <button class="menu-button" style="height: 25px; display: inline;float: left;margin-left: 25px;margin-top: 0px;">
-          <i class="fas fa-gas-pump" style="font-size: 17px;" id="circle"></i>
-          <div style="display: inline; font-size: 17px;" id="gasEther"> gwei</div>
-        </button>
-      </a>
+          <button class="menu-button" style="height: 25px; display: inline;float: left;margin-left: 25px;margin-top: 0px;">
+            <i class="fas fa-gas-pump" style="font-size: 17px;" id="circle"></i>
+            <div style="display: inline; font-size: 17px;" id="gasEther"> gwei</div>
+          </button>
+        </a>
         <div class="respomenu">
 
           <button class="button-info menu-button" style="float:none;" onclick="menu1(), menu2_close(), getBalance()">
-            <img src="assets/image/metamask.png" id="logo" width="25px" height="25px" style="float: left; margin-right: 10px;">
+            <!-- <img src="assets/image/metamask.png" id="logo" width="25px" height="25px" style="float: left; margin-right: 10px;"> -->
+            <img id="logoNetwork" width="25px" height="25px" style="display: inline;vertical-align: middle;margin-top: -5px;">
             <div style="display: inline; font-size: 14px;">{{toplen}}...{{endlen}}</div>
             <div class="loaderTx" id="loaderTx"></div>
             <div id="loaderTxs" style="padding: 0px;display: inline;"></div>
@@ -59,7 +60,7 @@
 
             <div style="height:10px"></div>
             <a style="font-size: 16px; font-weight: 800;text-align: left;">Your Wallet</a>
-            <a style="font-size: 15px; float: right;">Balance: <b><div id="mybalance_menu" style="display: inline;"></div> <div id="currency" style="display: inline;"></div> <img id="logoNetwork" width="20px" height="20px" style="display: inline;vertical-align: middle;margin-top: -5px;"></b></a>
+            <a style="font-size: 15px; float: right;">Balance: <b><div id="mybalance_menu" style="display: inline;"></div> <div id="currency" style="display: inline;"></div> </b></a>
             <button class="addressBar" style="margin:0px 20px 20px 20px;">
               <div style="font-size: 14px;">{{account.address}}</div>
             </button>
@@ -125,6 +126,9 @@
         </div>
       </div>
     </div>
+
+    <div><a style="padding-top: 25px;font-size: 20px;font-family: monospace;"><b>Snapper</b>.fi</a></div>
+    
 
     <script>
     document.getElementById('outer-div').addEventListener('click', function(e){
