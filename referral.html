@@ -331,65 +331,59 @@
     </br></br>
       <a style="font-size: 17px;" onclick="sintaxLink()">Marketing Media  <i class="fa fa-chevron-down"></i></a>
 
-<div style="width: 600px;display:none;" id="sintaxLink">
+<div style="width: 1000px;display:none;" id="sintaxLink">
 
 
   <!-- VIDEO -->
 
   <h1>Videos</h1>
 
-  <div style="font-size: 14px;width: 400px; margin: 0px 20px;padding: 15px;border-radius: 15px;text-align: center;">
+  <div style="font-size: 14px;width: auto; margin: 0px 20px;padding: 15px;border-radius: 15px;text-align: center;">
     <a><b>Videos for promotional use:</b> </br>
-    <table class="form-table-b2" style="width: 400px;border-radius: 15px;margin-top: 10px;">
+    <table class="form-table-b2" style="width: 100%;border-radius: 15px;margin-top: 10px;">
       <tr>
         <td>
 
 
-            <img src="assets/image/eth.png" width="27px" height="27px" style="vertical-align: middle;">
-            <button class="buttonText"><a>Ethereum</a></button> 
+          <div style="min-inline-size: max-content;">
+          <img src="assets/image/eth.png" width="27px" height="27px" style="vertical-align: middle;">
+          <button class="buttonText"><a>Ethereum</a></button> 
+          <button class="buttonVideos" style="background: #627eea; margin-right:10px;border-radius: 10px;">
+            <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=copy" target="_blank" style="color: #fff"><i class="fas fa-font"></i> Text</a></button>
+          <textarea id="linkBanner1" onclick="this.focus();this.select()" 
+            style="white-space: nowrap;overflow: hidden;overflow-wrap: break-word;resize: horizontal;border: 0px;width: auto;max-width: 350px;background: #e9e9e9;border-radius: 15px;padding: 10px;margin-top: -10px;height:14px; display: inline;vertical-align: -webkit-baseline-middle;"
+            >https://shortlink/video1</textarea><i class="fas fa-download myIcons"></i></i>
+          </div>
 
-            <button class="buttonVideos" style="background: #627eea;; margin-left:10px">
-              <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=copy" target="_blank" style="color: #fff"><i class="fas fa-play-circle"></i> Play</a></button>
-            <button class="buttonMeta" style="margin-left:5px" onclick="copyMetaAvalanche()">
-              <a href="#" target="_blank" style="color: #363636"><i class="fas fa-copy"></i> Meta</a></button>
-              <i class="fas fa-download myIcons"></i></br>
+          <div style="min-inline-size: max-content;">
+            <img src="assets/image/bnb.png" width="27px" height="27px" style="vertical-align: middle;">
+            <button class="buttonText"><a>Binance</a></button> 
+            <button class="buttonVideos" style="background: #f3ba2f; margin-right:10px;border-radius: 10px;">
+              <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=copy" target="_blank" style="color: #fff"><i class="fas fa-font"></i> Text</a></button>
+            <textarea id="linkBanner1" onclick="this.focus();this.select()" 
+              style="white-space: nowrap;overflow: hidden;overflow-wrap: break-word;resize: horizontal;border: 0px;width: auto;max-width: 350px;background: #e9e9e9;border-radius: 15px;padding: 10px;margin-top: -10px;height:14px; display: inline;vertical-align: -webkit-baseline-middle;"
+              >https://shortlink/video1</textarea><i class="fas fa-download myIcons"></i></i>
+            </div>
 
+            <div style="min-inline-size: max-content;">
+              <img src="assets/image/matic.png" width="27px" height="27px" style="vertical-align: middle;">
+              <button class="buttonText"><a>Polygon</a></button> 
+              <button class="buttonVideos" style="background: #8247e5; margin-right:10px;border-radius: 10px;">
+                <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=copy" target="_blank" style="color: #fff"><i class="fas fa-font"></i> Text</a></button>
+              <textarea id="linkBanner1" onclick="this.focus();this.select()" 
+                style="white-space: nowrap;overflow: hidden;overflow-wrap: break-word;resize: horizontal;border: 0px;width: auto;max-width: 350px;background: #e9e9e9;border-radius: 15px;padding: 10px;margin-top: -10px;height:14px; display: inline;vertical-align: -webkit-baseline-middle;"
+                >https://shortlink/video1</textarea><i class="fas fa-download myIcons"></i></i>
+              </div>
 
-
-
-
-          <img src="assets/image/bnb.png" width="27px" height="27px" style="vertical-align: middle;">
-          <button class="buttonText"><a>Binance</a></button> 
-
-          <button class="buttonVideos" style="background: #f3ba2f; margin-left:10px">
-            <a href="#" target="_blank" style="color: #fff"><i class="fas fa-play-circle"></i> Play</a></button>
-
-            <button class="buttonMeta" style="margin-left:5px" onclick="copyMetaAvalanche()">
-              <a href="#" target="_blank" style="color: #363636"><i class="fas fa-copy"></i> Meta</a></button>
-              <i class="fas fa-download myIcons"></i></br>
-
-
-       <img src="assets/image/matic.png" width="27px" height="27px" style="vertical-align: middle;">
-       <button class="buttonText"><a>Polygon</a></button> 
-
-          <button class="buttonVideos" style="background: #8247e5; margin-left:10px">
-             <a href="#" target="_blank" style="color: #fff"><i class="fas fa-play-circle"></i> Play</a></button>
-
-          <button class="buttonMeta" style="margin-left:5px" onclick="copyMetaAvalanche()">
-           <a href="#" target="_blank" style="color: #363636"><i class="fas fa-copy"></i> Meta</a></button>
-           <i class="fas fa-download myIcons"></i></br>
-
-
-
-          <img src="assets/image/avax.png" width="27px" height="27px" style="vertical-align: middle;">
-          <button class="buttonText"><a>Avalanche</a></button> 
-
-          <button class="buttonVideos" style="background: #e84142; margin-left:10px">
-            <a href="#" target="_blank" style="color: #fff"><i class="fas fa-play-circle"></i> Play</a></button>
-
-         <button class="buttonMeta" style="margin-left:5px" onclick="copyMetaAvalanche()">
-          <a href="#" target="_blank" style="color: #363636"><i class="fas fa-copy"></i> Meta</a></button>
-       <i class="fas fa-download myIcons"></i></br>
+              <div style="min-inline-size: max-content;">
+                <img src="assets/image/avax.png" width="27px" height="27px" style="vertical-align: middle;">
+                <button class="buttonText"><a>Avalanche</a></button> 
+                <button class="buttonVideos" style="background: #e84142; margin-right:10px;border-radius: 10px;">
+                  <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=copy" target="_blank" style="color: #fff"><i class="fas fa-font"></i> Text</a></button>
+                <textarea id="linkBanner1" onclick="this.focus();this.select()" 
+                  style="white-space: nowrap;overflow: hidden;overflow-wrap: break-word;resize: horizontal;border: 0px;width: auto;max-width: 350px;background: #e9e9e9;border-radius: 15px;padding: 10px;margin-top: -10px;height:14px; display: inline;vertical-align: -webkit-baseline-middle;"
+                  >https://shortlink/video1</textarea><i class="fas fa-download myIcons"></i></i>
+                </div>
 
          <style>
            .myIcons {
@@ -471,7 +465,7 @@
       <table class="form-table-b2" style="width: 360px;border-radius: 15px;margin-top: 10px;">
         <tr>
           <td>
-            <textarea id="linkBanner1" onclick="this.focus();this.select()" style="overflow: hidden;overflow-wrap: break-word;resize: horizontal;border: 0px;width: 370px;background: #e9e9e9;border-radius: 15px;padding: 10px;margin-top: 10px;height:60px">&lt;img width='300px' height='200px' src='https://snapper.fi/assets/image/banner/300x200.png' href='https://snapper.fi/?={{account.address}}'&gt;</textarea>
+            <textarea id="linkBanner1" onclick="this.focus();this.select()" style="overflow: hidden;overflow-wrap: break-word;resize: vertical;border: 0px;width: 370px;background: #e9e9e9;border-radius: 15px;padding: 10px;margin-top: 10px;height:60px">&lt;img width='300px' height='200px' src='https://snapper.fi/assets/image/banner/300x200.png' href='https://snapper.fi/?={{account.address}}'&gt;</textarea>
             <script>
               function copyBanner1(id) {
                 var r = document.createRange();
@@ -503,7 +497,7 @@
       <table class="form-table-b2" style="width: 360px;border-radius: 15px;margin-top: 10px;">
         <tr>
           <td>
-            <textarea id="linkBanner2" onclick="this.focus();this.select()" style="overflow: hidden;overflow-wrap: break-word;resize: horizontal;border: 0px;width: 370px;background: rgb(233, 233, 233);border-radius: 15px;padding: 10px;margin-top: 10px;height:60px">&lt;img width='300px' height='600px' src='https://snapper.fi/assets/image/banner/300x600.png' href='https://snapper.fi/?={{account.address}}'&gt;</textarea>
+            <textarea id="linkBanner2" onclick="this.focus();this.select()" style="overflow: hidden;overflow-wrap: break-word;resize: vertical;border: 0px;width: 370px;background: rgb(233, 233, 233);border-radius: 15px;padding: 10px;margin-top: 10px;height:60px">&lt;img width='300px' height='600px' src='https://snapper.fi/assets/image/banner/300x600.png' href='https://snapper.fi/?={{account.address}}'&gt;</textarea>
             <script>
               function copyBanner2(id) {
                 var r = document.createRange();
@@ -535,7 +529,7 @@
       <table class="form-table-b2" style="width: 360px;border-radius: 15px;margin-top: 10px;">
         <tr>
           <td>
-            <textarea id="linkBanner3" onclick="this.focus();this.select()" style="overflow: hidden;overflow-wrap: break-word;resize: horizontal;border: 0px;width: 370px;background: rgb(233, 233, 233);border-radius: 15px;padding: 10px;margin-top: 10px;height:60px">&lt;img width='728px' height='90px' src='https://snapper.fi/assets/image/banner/728x90.png' href='https://snapper.fi/?={{account.address}}'&gt;</textarea>
+            <textarea id="linkBanner3" onclick="this.focus();this.select()" style="overflow: hidden;overflow-wrap: break-word;resize: vertical;border: 0px;width: 370px;background: rgb(233, 233, 233);border-radius: 15px;padding: 10px;margin-top: 10px;height:60px">&lt;img width='728px' height='90px' src='https://snapper.fi/assets/image/banner/728x90.png' href='https://snapper.fi/?={{account.address}}'&gt;</textarea>
             <script>
               function copyBanner3(id) {
                 var r = document.createRange();
