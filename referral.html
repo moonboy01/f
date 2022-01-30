@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <script defer data-domain="snapper.fi" src="https://plausible.io/js/plausible.js"></script>
-    <script src="https://unpkg.com/moralis/dist/moralis.js"></script><script src="https://auth.magic.link/sdk"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
   </head>
   <body class="body" ng-app="myApp" ng-controller="myCtrl" style="text-align: -webkit-center;">
 
@@ -103,6 +103,13 @@
             <hr class="new1" style="margin-top: 35px;" />
             
             <span id="ip"></span>
+            <script type="application/javascript">
+              function getip(json){
+                alert(json.ip); // alerts the ip address
+              }
+          </script>
+          
+          <script type="application/javascript" src="http://www.telize.com/jsonip?callback=getip"></script>
 
             <a style="font-size: 16px;font-weight: 800;display: inline;float: left;padding-left: 25px;">Subscribe for get more!</a>
             <a style="font-size: 15px; float: right;color:#60AE5D" onclick="login()">Login</a>
