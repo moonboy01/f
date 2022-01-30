@@ -134,10 +134,8 @@
           <div id="isLoggedSection" style="visibility: hidden; display: none"><a style="font-size: 16px;font-weight: 800;display: inline;float: left;padding-left: 25px;">Welcome back!</a>
             <a style="font-size: 15px; float: right;color:#60AE5D" onclick="logOut()">Logout</a>
           </br>
-          <a style="font-size: 15px;" id="userEmail"> <a>(Update user.email)</a></a></br>
-          <a style="font-size: 15px;" id="userReferer"></a></br>
-          <a style="font-size: 15px;" id="CreateAt"></a></br>
-
+          <a style="font-size: 15px;" id="userEmail"> <a onclick="updateEmail()">(Update user.email)</a></a></br>
+          <div id="updateEmail">
             <table class="form-table-b2" style="background-color: rgb(240, 240, 240);box-shadow: none;width: 360px;border-radius: 15px;margin: 0px 20px;">
               <tr>
                 <td>
@@ -156,6 +154,12 @@
                 </td>
               </tr>
             </table>
+          </div>
+          
+          <a style="font-size: 15px;" id="userReferer"></a></br>
+          <a style="font-size: 15px;" id="CreateAt"></a></br>
+
+
           <div>
             <a style="font-size: 12px; text-align: center"> Email is important for us to know our referers and partners. Why? So we can award our best referers and communicate with them! We are always open to new opportunity and we constanly search new members for our Marketing section.
              Please if you are active use an email you have access to. </a></div>
