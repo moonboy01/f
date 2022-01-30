@@ -134,7 +134,11 @@
           <div id="isLoggedSection" style="visibility: hidden; display: none"><a style="font-size: 16px;font-weight: 800;display: inline;float: left;padding-left: 25px;">Welcome back!</a>
             <a style="font-size: 15px; float: right;color:#60AE5D" onclick="logOut()">Logout</a>
           </br>
-          <a style="font-size: 15px;" id="userEmail"> <a onclick="updateEmail()">(Update user.email)</a></a></br>
+
+          <textarea onclick="this.focus();this.select()" style="overflow: hidden;overflow-wrap: break-word;resize: vertical;border: 0px;width: 370px;background: #e9e9e9;border-radius: 15px;padding: 10px;margin-top: 10px;height:60px"><div id="userNote"></div></textarea>
+            
+
+          <a style="font-size: 15px;" id="userEmail" onclick="updateEmail()">(Update)</a></br>
           <div id="updateEmail" style="display:none;">
             <table class="form-table-b2" style="background-color: rgb(240, 240, 240);box-shadow: none;width: 360px;border-radius: 15px;margin: 0px 20px;">
               <tr>
