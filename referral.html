@@ -136,10 +136,11 @@
 
           <textarea id="userNote" onclick="this.focus();this.select()" style="overflow: hidden;overflow-wrap: break-word;resize: vertical;border: 0px;background: #e9e9e9;border-radius: 15px;padding: 10px 0px 0px 10px;height:60px;width: 360px;margin: 0px 16px;"></textarea>
             
-          <a style="font-size: 16px; float: none;display: block;" onclick="getNewNote()">UPDATE NOTE <i class="fas fa-reply"></i></a>
-          <a style="font-size: 12px; float: none;display: block;" ><b>Clear Cache to see updates!</b></a>
+          <a style="font-size: 16px; float: right;
+          font-weight: 600;" onclick="getNewNote()">UPDATE NOTE <i class="fas fa-reply"></i></a>
 
-          <a style="font-size: 15px;" id="userEmail" onclick="updateEmail()"></a></br>
+          <a style="font-size: 15px; display:inline;" id="userEmail" onclick="updateEmail()"></a>
+
           <div id="updateEmail" style="display:none;">
             <table class="form-table-b2" style="background-color: rgb(240, 240, 240);box-shadow: none;width: 360px;border-radius: 15px;margin: 0px 20px;">
               <tr>
