@@ -34,18 +34,21 @@
     <!-- MENU -->
     <div id="main" style="margin-top: -100px;">
       <div class="topnav">
+        <!-- LOGO -->
         <a class="darking-logo" href="{{locationUrlFixed}}/{{locationRefReferralUrl}}" id="site" style="padding: 11px 0px;">
           <img src="assets/image/logo/logo.png" id="logoImage" width="0px" height="0px" style="float: none;">
           <i class="fas fa-compass update" href="{{locationUrlFixed}}/{{locationRefReferralUrl}}" style="font-size: 25px;margin-top: -5px;"></i>
         </a>
+        <!-- GAS -->
         <a href="{{scan}}gastracker" target="_blank">
           <button class="menu-button" style="height: 25px; display: inline;float: left;margin-top: 0px;">
             <i class="fas fa-gas-pump" style="font-size: 17px;" id="circle"></i>
             <div style="display: inline; font-size: 17px;" id="gasEther"> gwei</div>
           </button>
         </a>
+        <!-- RIGHT -->
         <div class="respomenu">
-
+        <!-- MENU1 -->
           <button class="button-info menu-button" style="float:none;" onclick="menu1(), menu2_close(), getBalance()">
             <!-- <img src="assets/image/metamask.png" id="logo" width="25px" height="25px" style="float: left; margin-right: 10px;"> -->
             <img id="logoNetwork" width="25px" height="25px" style="float: left; margin-right: 10px;">
@@ -53,7 +56,6 @@
             <div class="loaderTx" id="loaderTx"></div>
             <div id="loaderTxs" style="padding: 0px;display: inline;"></div>
           </button>
-          
           <div id="Menu1" style="justify-content: right;display:none; background:transparent;width: 400px;float: right;">
             
             <div style="font-size: 14px; background:#fff;margin-top: 15px;border-radius: 15px;padding-bottom: 10px;width: 400px;position: fixed;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -128,9 +130,6 @@
             <a style="font-size: 12px; float: none;display: block;" >Problem to subscribe? Try another browser.</a>
           </div>
 
-
-
-
           <div id="isLoggedSection" style="visibility: hidden; display: none"><a style="font-size: 16px;font-weight: 800;display: inline;float: left;padding-left: 25px;">Welcome back!</a>
             <a style="font-size: 15px; float: right;color:#60AE5D" onclick="logOut()">Logout</a>
           </br>
@@ -202,36 +201,36 @@
             }
           }
         </script>
-
-          <button class="accordion menu-button" style="height: 25px;" onclick="menu2(), menu1_close()">Token List <i class="fa fa-chevron-down"></i>
-          </button>
-
-          <div id="Menu2" style="justify-content: right;display:none; background:transparent;width: 400px;float: right;" >
-
-            <div style="font-size: 14px; background:#fff;margin-top: 15px;border-radius: 15px;padding-bottom: 10px;width: 400px;position: fixed;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
-
-                  <div style="padding:10px 10px 0px 10px;display: revert">
-                      <a style="padding: 0px;"><img src="assets/image/eth.png" width="35px" height="35px"><a style="padding: 0px 0px 0px 20px;">Ethereum </br><b style="font-size: 12px;float: left;">id: 1</b></a>
-                      <a target="_blank" href="https://etherscan.io/tokens" style="color: white;float: none;"><button class="buttonList" style="background:#627eea">Etherscan</button></a></a>
-                    </div></br>
-                      
-                  <div style="padding:10px 10px 0px 10px;display: revert">
-                    <a style="padding: 0px;"><img style="vertical-align: middle;" src="assets/image/bnb.png" width="35px" height="35px"><a style="padding: 0px 0px 0px 20px;">Binance </br><b style="font-size: 12px;float: left;">id: 56</b></a>
-                    <a target="_blank" href="https://bscscan.com/tokens" style="color: white;float: none;">  <button class="buttonList" style="background:#f3ba2f">Bscscan</button></a></a>
-                  </div></br>
-
-                  <div style="padding:10px 10px 0px 10px;display: revert">
-                    <a style="padding: 0px;"><img style="vertical-align: middle;border-radius: 25px" src="assets/image/matic.png" width="35px" height="35px"><a style="padding: 0px 0px 0px 20px;">Polygon </br><b style="font-size: 12px;float: left;">id: 137</b></a>
-                     <a target="_blank" href="https://polygonscan.com/tokens" style="color: white;float: none;"> <button class="buttonList" style="background:#8247e5">Polygonscan</button></a></a>
-                      </div></br>
-
-                  <div style="padding:10px; margin-bottom: -25px;display: revert">
-                    <a style="padding: 0px;"><img style="vertical-align: middle;" src="assets/image/avax.png" width="35px" height="35px"><a style="padding: 0px 0px 0px 20px;">Avalanche </br><b style="font-size: 12px;float: left;">id: 43114</b></a>
-                     <a target="_blank" href="https://snowtrace.io/tokens" style="color: white;float: none;"> <button class="buttonList" style="background:#e84142">Snowtrace</button></a></a>
-                      </div>
-                    </div>
-          </div>
         </div>
+        <!-- MENU2 -->
+        <button class="accordion menu-button" style="height: 25px;" onclick="menu2(), menu1_close()">Token List <i class="fa fa-chevron-down"></i>
+        </button>
+        <div id="Menu2" style="justify-content: right;display:none; background:transparent;width: 400px;float: right;" >
+    
+          <div style="font-size: 14px; background:#fff;margin-top: 15px;border-radius: 15px;padding-bottom: 10px;width: 400px;position: fixed;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+    
+                <div style="padding:10px 10px 0px 10px;display: revert">
+                    <a style="padding: 0px;"><img src="assets/image/eth.png" width="35px" height="35px"><a style="padding: 0px 0px 0px 20px;">Ethereum </br><b style="font-size: 12px;float: left;">id: 1</b></a>
+                    <a target="_blank" href="https://etherscan.io/tokens" style="color: white;float: none;"><button class="buttonList" style="background:#627eea">Etherscan</button></a></a>
+                  </div></br>
+                    
+                <div style="padding:10px 10px 0px 10px;display: revert">
+                  <a style="padding: 0px;"><img style="vertical-align: middle;" src="assets/image/bnb.png" width="35px" height="35px"><a style="padding: 0px 0px 0px 20px;">Binance </br><b style="font-size: 12px;float: left;">id: 56</b></a>
+                  <a target="_blank" href="https://bscscan.com/tokens" style="color: white;float: none;">  <button class="buttonList" style="background:#f3ba2f">Bscscan</button></a></a>
+                </div></br>
+    
+                <div style="padding:10px 10px 0px 10px;display: revert">
+                  <a style="padding: 0px;"><img style="vertical-align: middle;border-radius: 25px" src="assets/image/matic.png" width="35px" height="35px"><a style="padding: 0px 0px 0px 20px;">Polygon </br><b style="font-size: 12px;float: left;">id: 137</b></a>
+                   <a target="_blank" href="https://polygonscan.com/tokens" style="color: white;float: none;"> <button class="buttonList" style="background:#8247e5">Polygonscan</button></a></a>
+                    </div></br>
+    
+                <div style="padding:10px; margin-bottom: -25px;display: revert">
+                  <a style="padding: 0px;"><img style="vertical-align: middle;" src="assets/image/avax.png" width="35px" height="35px"><a style="padding: 0px 0px 0px 20px;">Avalanche </br><b style="font-size: 12px;float: left;">id: 43114</b></a>
+                   <a target="_blank" href="https://snowtrace.io/tokens" style="color: white;float: none;"> <button class="buttonList" style="background:#e84142">Snowtrace</button></a></a>
+                    </div>
+                  </div>
+        </div>
+
       </div>
     </div>
 
@@ -243,6 +242,7 @@
       });
       //id="outer-div"
     </script>
+
 
 <div id="outer-div" onclick="menu1_close();menu2_close();">
   <div style="padding-top:100px"></div>
@@ -394,263 +394,265 @@
       </tr>
     </form>
 
-    <p style="padding:17px;padding-top: 5px;font-size: 13px;text-align: center; max-width:600px">
-      <b>Note:</b> Do more with less, thanks the <b>multilevel system</b>! You just need to add the referer Address after your referral link over here, you will get <b>6%</b> and your referer <b>4%</b> of any commissions!</br>
-    </br></br>
-      <a style="font-size: 17px;" onclick="sintaxLink()">Marketing Media  <i class="fa fa-chevron-down"></i></a>
-
-<div style="width: 1000px;display:none;" id="sintaxLink">
-
-
-  <!-- VIDEO -->
-
-  <h1>Videos <i class="fas fa-play-circle"></i></h1>
-
-  <div style="font-size: 14px;width: auto; margin: 0px 20px;padding: 15px;border-radius: 15px;text-align: center;">
-    <a><b>Videos for promotional use:</b> </br>
-    <table class="form-table-b2" style="width: 100%;border-radius: 15px;margin-top: 10px;">
-      <tr>
-        <td>
+    <div style="width: 100%;">
+        <p style="padding:17px;padding-top: 5px;font-size: 13px;text-align: center; max-width:600px">
+          <b>Note:</b> Do more with less, thanks the <b>multilevel system</b>! You just need to add the referer Address after your referral link over here, you will get <b>6%</b> and your referer <b>4%</b> of any commissions!</br>
+        </br></br>
+          <a style="font-size: 17px;" onclick="sintaxLink()">Marketing Media  <i class="fa fa-chevron-down"></i></a>
+        
+        <div style="width: 1000px;display:none;" id="sintaxLink">
 
 
-          <div style="min-inline-size: max-content;">
-          <img src="assets/image/eth.png" width="27px" height="27px" style="vertical-align: middle;">
-          <button class="buttonText"><a>Ethereum</a></button> 
-          <button class="buttonVideos" style="background: #627eea; margin-right:10px;border-radius: 10px;">
-            <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=copy" target="_blank" style="color: #fff"><i class="fas fa-font"></i> Text</a></button>
-          <textarea id="linkBanner1" onclick="this.focus();this.select()" 
-            style="white-space: nowrap;overflow: hidden;overflow-wrap: break-word;resize: horizontal;border: 0px;width: auto;max-width: 350px;background: #ddd;border-radius: 15px;padding: 10px;margin-top: -10px;height:14px; display: inline;vertical-align: -webkit-baseline-middle;"
-            >https://shortlink/video1</textarea><i class="fas fa-download myIcons"></i></i>
+          <!-- VIDEO -->
+
+          <h1>Videos <i class="fas fa-play-circle"></i></h1>
+
+          <div style="font-size: 14px;width: auto; margin: 0px 20px;padding: 15px;border-radius: 15px;text-align: center;">
+            <a><b>Videos for promotional use:</b> </br>
+            <table class="form-table-b2" style="width: 100%;border-radius: 15px;margin-top: 10px;">
+              <tr>
+                <td>
+
+
+                  <div style="min-inline-size: max-content;">
+                  <img src="assets/image/eth.png" width="27px" height="27px" style="vertical-align: middle;">
+                  <button class="buttonText"><a>Ethereum</a></button> 
+                  <button class="buttonVideos" style="background: #627eea; margin-right:10px;border-radius: 10px;">
+                    <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=copy" target="_blank" style="color: #fff"><i class="fas fa-font"></i> Text</a></button>
+                  <textarea id="linkBanner1" onclick="this.focus();this.select()" 
+                    style="white-space: nowrap;overflow: hidden;overflow-wrap: break-word;resize: horizontal;border: 0px;width: auto;max-width: 350px;background: #ddd;border-radius: 15px;padding: 10px;margin-top: -10px;height:14px; display: inline;vertical-align: -webkit-baseline-middle;"
+                    >https://shortlink/video1</textarea><i class="fas fa-download myIcons"></i></i>
+                  </div>
+
+                  <div style="min-inline-size: max-content;">
+                    <img src="assets/image/bnb.png" width="27px" height="27px" style="vertical-align: middle;">
+                    <button class="buttonText"><a>Binance</a></button> 
+                    <button class="buttonVideos" style="background: #f3ba2f; margin-right:10px;border-radius: 10px;">
+                      <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=copy" target="_blank" style="color: #fff"><i class="fas fa-font"></i> Text</a></button>
+                    <textarea id="linkBanner1" onclick="this.focus();this.select()" 
+                      style="white-space: nowrap;overflow: hidden;overflow-wrap: break-word;resize: horizontal;border: 0px;width: auto;max-width: 350px;background: #ddd;border-radius: 15px;padding: 10px;margin-top: -10px;height:14px; display: inline;vertical-align: -webkit-baseline-middle;"
+                      >https://shortlink/video1</textarea><i class="fas fa-download myIcons"></i></i>
+                    </div>
+
+                    <div style="min-inline-size: max-content;">
+                      <img src="assets/image/matic.png" width="27px" height="27px" style="vertical-align: middle;">
+                      <button class="buttonText"><a>Polygon</a></button> 
+                      <button class="buttonVideos" style="background: #8247e5; margin-right:10px;border-radius: 10px;">
+                        <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=copy" target="_blank" style="color: #fff"><i class="fas fa-font"></i> Text</a></button>
+                      <textarea id="linkBanner1" onclick="this.focus();this.select()" 
+                        style="white-space: nowrap;overflow: hidden;overflow-wrap: break-word;resize: horizontal;border: 0px;width: auto;max-width: 350px;background: #ddd;border-radius: 15px;padding: 10px;margin-top: -10px;height:14px; display: inline;vertical-align: -webkit-baseline-middle;"
+                        >https://shortlink/video1</textarea><i class="fas fa-download myIcons"></i></i>
+                      </div>
+
+                      <div style="min-inline-size: max-content;">
+                        <img src="assets/image/avax.png" width="27px" height="27px" style="vertical-align: middle;">
+                        <button class="buttonText"><a>Avalanche</a></button> 
+                        <button class="buttonVideos" style="background: #e84142; margin-right:10px;border-radius: 10px;">
+                          <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=copy" target="_blank" style="color: #fff"><i class="fas fa-font"></i> Text</a></button>
+                        <textarea id="linkBanner1" onclick="this.focus();this.select()" 
+                          style="white-space: nowrap;overflow: hidden;overflow-wrap: break-word;resize: horizontal;border: 0px;width: auto;max-width: 350px;background: #ddd;border-radius: 15px;padding: 10px;margin-top: -10px;height:14px; display: inline;vertical-align: -webkit-baseline-middle;"
+                          >https://shortlink/video1</textarea><i class="fas fa-download myIcons"></i></i>
+                        </div>
+
+                <style>
+                  .myIcons {
+                    display: inline;
+                    margin:0px 10px;
+                    margin-top: 10px;
+                  }
+                  .buttonVideos {
+                    width: 70px;
+                    font-size: 14px;
+                    padding: 5px 0px;
+                    margin-top: 5px;
+                    text-align: left;
+                    border-radius: 5px;
+                  }
+                  .buttonVideos:hover {
+                    width: 70px;
+                    font-size: 14px;
+                    padding: 5px 0px;
+                    margin-top: 5px;
+                    text-align: left;
+                    background: #363636!important; 
+                    border-radius: 5px;
+                  }
+
+                  .buttonMeta {
+                    width: 70px;
+                    font-size: 14px;
+                    padding: 5px 0px;
+                    margin-top: 5px;
+                    text-align: left;
+                    border-radius: 5px;
+                    background: #ffffff;
+                  }
+                  .buttonMeta:hover {
+                    width: 70px;
+                    font-size: 14px;
+                    padding: 5px 0px;
+                    margin-top: 5px;
+                    text-align: left;
+                    background: transparent!important; 
+                    border-radius: 5px;
+                  }
+                  .buttonText {
+                    font-family: monospace;
+                    width: 100px;
+                    font-size: 14px;
+                    padding: 5px 0px;
+                    margin-top: 5px;
+                    text-align: left;
+                    border-radius: 5px;
+                    background-color:transparent;
+                  }
+                  .buttonText:hover {
+                    font-family: monospace;
+                    width: 100px;
+                    font-size: 14px;
+                    padding: 5px 0px;
+                    margin-top: 5px;
+                    text-align: left;
+                    border-radius: 5px;
+                    background-color:transparent;
+                  }
+                  .buttonHelp {
+                    width: auto;
+                    font-size: 14px;
+                    padding: 5px 10px;
+                    margin-top: 5px;
+                    background: #363636;
+                    display: inline
+                  }
+                  .buttonHelp:hover {
+                    width: auto;
+                    font-size: 14px;
+                    padding: 5px 10px;
+                    margin-top: 5px;
+                    color:#60ae5d;
+                    background: transparent;
+                    display: inline
+                  }
+                </style>
+
+                </td>
+              </tr>
+            </table>
           </div>
 
-          <div style="min-inline-size: max-content;">
-            <img src="assets/image/bnb.png" width="27px" height="27px" style="vertical-align: middle;">
-            <button class="buttonText"><a>Binance</a></button> 
-            <button class="buttonVideos" style="background: #f3ba2f; margin-right:10px;border-radius: 10px;">
-              <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=copy" target="_blank" style="color: #fff"><i class="fas fa-font"></i> Text</a></button>
-            <textarea id="linkBanner1" onclick="this.focus();this.select()" 
-              style="white-space: nowrap;overflow: hidden;overflow-wrap: break-word;resize: horizontal;border: 0px;width: auto;max-width: 350px;background: #ddd;border-radius: 15px;padding: 10px;margin-top: -10px;height:14px; display: inline;vertical-align: -webkit-baseline-middle;"
-              >https://shortlink/video1</textarea><i class="fas fa-download myIcons"></i></i>
+          <hr style="width: 600px">
+
+          <!-- BANNER -->
+
+          <h1>Banners <i class="fas fa-ad"></i></h1>
+            <div style="font-size: 14px;text-align: left;width: 400px; margin: 0px 20px; background-color:#fff;padding: 15px;border-radius: 15px;">
+              <a><b>Banner:</b> 300x200</a>
+              <a href="https://snapper.fi/assets/image/banner/300x200.png" target="_blank" ><button style="float: right;margin-top: -5px;width: 100px;font-size: 14px;padding: 5px 0px;background: #2c76d8;margin-left:10px;">Direct link <i class="fas fa-image"></i></button></a>
+              <button onclick="copyBanner1(), plausible('copy_banner')" style="float: right;margin-top: -5px;width: 100px;font-size: 14px;padding: 5px 0px;background: #60ae5d;display: inline">Copy code <i class="fas fa-code"></i></button>
+
+              <table class="form-table-b2" style="width: 360px;border-radius: 15px;margin-top: 10px;">
+                <tr>
+                  <td>
+                    <textarea id="linkBanner1" onclick="this.focus();this.select()" style="overflow: hidden;overflow-wrap: break-word;resize: vertical;border: 0px;width: 370px;background: #e9e9e9;border-radius: 15px;padding: 10px;margin-top: 10px;height:60px">&lt;img width='300px' height='200px' src='https://snapper.fi/assets/image/banner/300x200.png' href='https://snapper.fi/?={{account.address}}'&gt;</textarea>
+                    <script>
+                      function copyBanner1(id) {
+                        var r = document.createRange();
+                        r.selectNode(document.getElementById("linkBanner1"));
+                        window.getSelection().removeAllRanges();
+                        window.getSelection().addRange(r);
+                        document.execCommand('copy');
+                        window.getSelection().removeAllRanges();
+                        return alert("Banner code copied successfully!");
+                      }
+                      </script>
+
+                    <a style="font-size: 17px;text-align: center;display: block;padding: 20px 0px 0px 0px;" onclick="viewBanner1()">View Image  <i class="fa fa-chevron-down"></i></a>
+                    <div style="display:none;margin-top:20px; text-align: center;padding: 0px;margin: 0px;" id="banner1">
+                    <img src='assets/image/banner/300x200.png' width='300px' height='200px' href='https://snapper.fi/?={{account.address}}' style="margin:10px 0px;">
+                    <a style="font-family: monospace;font-size: 11px;">https://snapper.fi/assets/image/banner/300x200.png</a>
+                  </div>
+
+                  </td>
+                </tr>
+              </table>
+            </div> <div style="height:40px"></div>
+
+            <div style="font-size: 14px;text-align: left;width: 400px; margin: 0px 20px; background-color:#fff;padding: 15px;border-radius: 15px;">
+              <a><b>Banner:</b> 300x600</a>
+              <a href="https://snapper.fi/assets/image/banner/300x600.png" target="_blank" ><button style="float: right;margin-top: -5px;width: 100px;font-size: 14px;padding: 5px 0px;background: #2c76d8;margin-left:10px;">Direct link <i class="fas fa-image"></i></button></a>
+              <button onclick="copyBanner2(), plausible('copy_banner')" style="float: right;margin-top: -5px;width: 100px;font-size: 14px;padding: 5px 0px;background: #60ae5d;display: inline">Copy code <i class="fas fa-code"></i></button>
+
+              <table class="form-table-b2" style="width: 360px;border-radius: 15px;margin-top: 10px;">
+                <tr>
+                  <td>
+                    <textarea id="linkBanner2" onclick="this.focus();this.select()" style="overflow: hidden;overflow-wrap: break-word;resize: vertical;border: 0px;width: 370px;background: rgb(233, 233, 233);border-radius: 15px;padding: 10px;margin-top: 10px;height:60px">&lt;img width='300px' height='600px' src='https://snapper.fi/assets/image/banner/300x600.png' href='https://snapper.fi/?={{account.address}}'&gt;</textarea>
+                    <script>
+                      function copyBanner2(id) {
+                        var r = document.createRange();
+                        r.selectNode(document.getElementById("linkBanner2"));
+                        window.getSelection().removeAllRanges();
+                        window.getSelection().addRange(r);
+                        document.execCommand('copy');
+                        window.getSelection().removeAllRanges();
+                        return alert("Banner code copied successfully!");
+                      }
+                      </script>
+
+                    <a style="font-size: 17px;text-align: center;display: block;padding: 20px 0px 0px 0px;" onclick="viewBanner2()">View Image  <i class="fa fa-chevron-down"></i></a>
+                    <div style="display:none;margin-top:20px; text-align: center;padding: 0px;margin: 0px;" id="banner2">
+                    <img src='assets/image/banner/300x600.png' width='300px' height='600px' href='https://snapper.fi/?={{account.address}}' style="margin:10px 0px;">
+                    <a style="font-family: monospace;font-size: 11px;">https://snapper.fi/assets/image/banner/300x600.png</a>
+                  </div>
+
+                  </td>
+                </tr>
+              </table>
+            </div> <div style="height:40px"></div>
+
+            <div  style="font-size: 14px;text-align: left;width: 400px; margin: 0px 20px; background-color:#fff;padding: 15px;border-radius: 15px;">
+              <a><b>Banner:</b> 728x90</a>
+              <a href="https://snapper.fi/assets/image/banner/728x90.png" target="_blank" ><button style="float: right;margin-top: -5px;width: 100px;font-size: 14px;padding: 5px 0px;background: #2c76d8;margin-left:10px;">Direct link <i class="fas fa-image"></i></button></a>
+              <button onclick="copyBanner3(), plausible('copy_banner')" style="float: right;margin-top: -5px;width: 100px;font-size: 14px;padding: 5px 0px;background: #60ae5d;display: inline">Copy code <i class="fas fa-code"></i></button>
+
+              <table class="form-table-b2" style="width: 360px;border-radius: 15px;margin-top: 10px;">
+                <tr>
+                  <td>
+                    <textarea id="linkBanner3" onclick="this.focus();this.select()" style="overflow: hidden;overflow-wrap: break-word;resize: vertical;border: 0px;width: 370px;background: rgb(233, 233, 233);border-radius: 15px;padding: 10px;margin-top: 10px;height:60px">&lt;img width='728px' height='90px' src='https://snapper.fi/assets/image/banner/728x90.png' href='https://snapper.fi/?={{account.address}}'&gt;</textarea>
+                    <script>
+                      function copyBanner3(id) {
+                        var r = document.createRange();
+                        r.selectNode(document.getElementById("linkBanner3"));
+                        window.getSelection().removeAllRanges();
+                        window.getSelection().addRange(r);
+                        document.execCommand('copy');
+                        window.getSelection().removeAllRanges();
+                        return alert("Banner code copied successfully!");
+                      }
+                      </script>
+
+                    <a style="font-size: 17px;text-align: center;display: block;padding: 20px 0px 0px 0px;" onclick="viewBanner3()">View Image  <i class="fa fa-chevron-down"></i></a>
+                    <div style="display:none;margin-top:20px; text-align: center;padding: 0px;margin: 0px;" id="banner3">
+                    <img src='assets/image/banner/728x90.png' width='728px' height='90px' href='https://snapper.fi/?={{account.address}}' style="margin:10px 0px;">
+                    <a style="font-family: monospace;font-size: 11px;">https://snapper.fi/assets/image/banner/728x90.png</a>
+                  </div>
+
+                  </td>
+                </tr>
+              </table>
             </div>
 
-            <div style="min-inline-size: max-content;">
-              <img src="assets/image/matic.png" width="27px" height="27px" style="vertical-align: middle;">
-              <button class="buttonText"><a>Polygon</a></button> 
-              <button class="buttonVideos" style="background: #8247e5; margin-right:10px;border-radius: 10px;">
-                <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=copy" target="_blank" style="color: #fff"><i class="fas fa-font"></i> Text</a></button>
-              <textarea id="linkBanner1" onclick="this.focus();this.select()" 
-                style="white-space: nowrap;overflow: hidden;overflow-wrap: break-word;resize: horizontal;border: 0px;width: auto;max-width: 350px;background: #ddd;border-radius: 15px;padding: 10px;margin-top: -10px;height:14px; display: inline;vertical-align: -webkit-baseline-middle;"
-                >https://shortlink/video1</textarea><i class="fas fa-download myIcons"></i></i>
-              </div>
 
-              <div style="min-inline-size: max-content;">
-                <img src="assets/image/avax.png" width="27px" height="27px" style="vertical-align: middle;">
-                <button class="buttonText"><a>Avalanche</a></button> 
-                <button class="buttonVideos" style="background: #e84142; margin-right:10px;border-radius: 10px;">
-                  <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=copy" target="_blank" style="color: #fff"><i class="fas fa-font"></i> Text</a></button>
-                <textarea id="linkBanner1" onclick="this.focus();this.select()" 
-                  style="white-space: nowrap;overflow: hidden;overflow-wrap: break-word;resize: horizontal;border: 0px;width: auto;max-width: 350px;background: #ddd;border-radius: 15px;padding: 10px;margin-top: -10px;height:14px; display: inline;vertical-align: -webkit-baseline-middle;"
-                  >https://shortlink/video1</textarea><i class="fas fa-download myIcons"></i></i>
-                </div>
+          <hr style="width: 600px; margin-top:50px">
 
-         <style>
-           .myIcons {
-            display: inline;
-            margin:0px 10px;
-            margin-top: 10px;
-           }
-          .buttonVideos {
-            width: 70px;
-            font-size: 14px;
-            padding: 5px 0px;
-            margin-top: 5px;
-            text-align: left;
-            border-radius: 5px;
-           }
-           .buttonVideos:hover {
-             width: 70px;
-             font-size: 14px;
-             padding: 5px 0px;
-             margin-top: 5px;
-             text-align: left;
-             background: #363636!important; 
-            border-radius: 5px;
-           }
+          <!-- OTHER -->
 
-           .buttonMeta {
-            width: 70px;
-            font-size: 14px;
-            padding: 5px 0px;
-            margin-top: 5px;
-            text-align: left;
-            border-radius: 5px;
-            background: #ffffff;
-           }
-           .buttonMeta:hover {
-             width: 70px;
-             font-size: 14px;
-             padding: 5px 0px;
-             margin-top: 5px;
-             text-align: left;
-             background: transparent!important; 
-            border-radius: 5px;
-           }
-          .buttonText {
-            font-family: monospace;
-            width: 100px;
-            font-size: 14px;
-            padding: 5px 0px;
-            margin-top: 5px;
-            text-align: left;
-            border-radius: 5px;
-            background-color:transparent;
-           }
-           .buttonText:hover {
-            font-family: monospace;
-             width: 100px;
-             font-size: 14px;
-             padding: 5px 0px;
-             margin-top: 5px;
-             text-align: left;
-            border-radius: 5px;
-            background-color:transparent;
-           }
-          .buttonHelp {
-            width: auto;
-            font-size: 14px;
-            padding: 5px 10px;
-            margin-top: 5px;
-            background: #363636;
-            display: inline
-           }
-           .buttonHelp:hover {
-             width: auto;
-             font-size: 14px;
-             padding: 5px 10px;
-             margin-top: 5px;
-             color:#60ae5d;
-             background: transparent;
-             display: inline
-           }
-         </style>
+          <h1>Useful Links <i class="fas fa-hands-helping"></i></h1>
+          <button class="buttonHelp" style="margin-top: -5px;font-size: 14px;"><a href="#" target="_blank"><i class="fas fa-chart-area"> </i> Analytics Dashboard</a></button>
+          <button class="buttonHelp" style="margin-top: -5px;font-size: 14px;"><a href="#" target="_blank"><i class="fas fa-ghost"> </i> Proxy Accounts</a></button>
+          <button class="buttonHelp" style="margin-top: -5px;font-size: 14px;"><a href="#" target="_blank"><i class="fas fa-code"> </i> Other...</a></button>
 
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <hr style="width: 600px">
-
-  <!-- BANNER -->
-
-  <h1>Banners <i class="fas fa-ad"></i></h1>
-    <div style="font-size: 14px;text-align: left;width: 400px; margin: 0px 20px; background-color:#fff;padding: 15px;border-radius: 15px;">
-      <a><b>Banner:</b> 300x200</a>
-      <a href="https://snapper.fi/assets/image/banner/300x200.png" target="_blank" ><button style="float: right;margin-top: -5px;width: 100px;font-size: 14px;padding: 5px 0px;background: #2c76d8;margin-left:10px;">Direct link <i class="fas fa-image"></i></button></a>
-      <button onclick="copyBanner1(), plausible('copy_banner')" style="float: right;margin-top: -5px;width: 100px;font-size: 14px;padding: 5px 0px;background: #60ae5d;display: inline">Copy code <i class="fas fa-code"></i></button>
-
-      <table class="form-table-b2" style="width: 360px;border-radius: 15px;margin-top: 10px;">
-        <tr>
-          <td>
-            <textarea id="linkBanner1" onclick="this.focus();this.select()" style="overflow: hidden;overflow-wrap: break-word;resize: vertical;border: 0px;width: 370px;background: #e9e9e9;border-radius: 15px;padding: 10px;margin-top: 10px;height:60px">&lt;img width='300px' height='200px' src='https://snapper.fi/assets/image/banner/300x200.png' href='https://snapper.fi/?={{account.address}}'&gt;</textarea>
-            <script>
-              function copyBanner1(id) {
-                var r = document.createRange();
-                r.selectNode(document.getElementById("linkBanner1"));
-                window.getSelection().removeAllRanges();
-                window.getSelection().addRange(r);
-                document.execCommand('copy');
-                window.getSelection().removeAllRanges();
-                return alert("Banner code copied successfully!");
-              }
-              </script>
-
-            <a style="font-size: 17px;text-align: center;display: block;padding: 20px 0px 0px 0px;" onclick="viewBanner1()">View Image  <i class="fa fa-chevron-down"></i></a>
-            <div style="display:none;margin-top:20px; text-align: center;padding: 0px;margin: 0px;" id="banner1">
-            <img src='assets/image/banner/300x200.png' width='300px' height='200px' href='https://snapper.fi/?={{account.address}}' style="margin:10px 0px;">
-            <a style="font-family: monospace;font-size: 11px;">https://snapper.fi/assets/image/banner/300x200.png</a>
           </div>
-
-          </td>
-        </tr>
-      </table>
-    </div> <div style="height:40px"></div>
-
-    <div style="font-size: 14px;text-align: left;width: 400px; margin: 0px 20px; background-color:#fff;padding: 15px;border-radius: 15px;">
-      <a><b>Banner:</b> 300x600</a>
-      <a href="https://snapper.fi/assets/image/banner/300x600.png" target="_blank" ><button style="float: right;margin-top: -5px;width: 100px;font-size: 14px;padding: 5px 0px;background: #2c76d8;margin-left:10px;">Direct link <i class="fas fa-image"></i></button></a>
-      <button onclick="copyBanner2(), plausible('copy_banner')" style="float: right;margin-top: -5px;width: 100px;font-size: 14px;padding: 5px 0px;background: #60ae5d;display: inline">Copy code <i class="fas fa-code"></i></button>
-
-      <table class="form-table-b2" style="width: 360px;border-radius: 15px;margin-top: 10px;">
-        <tr>
-          <td>
-            <textarea id="linkBanner2" onclick="this.focus();this.select()" style="overflow: hidden;overflow-wrap: break-word;resize: vertical;border: 0px;width: 370px;background: rgb(233, 233, 233);border-radius: 15px;padding: 10px;margin-top: 10px;height:60px">&lt;img width='300px' height='600px' src='https://snapper.fi/assets/image/banner/300x600.png' href='https://snapper.fi/?={{account.address}}'&gt;</textarea>
-            <script>
-              function copyBanner2(id) {
-                var r = document.createRange();
-                r.selectNode(document.getElementById("linkBanner2"));
-                window.getSelection().removeAllRanges();
-                window.getSelection().addRange(r);
-                document.execCommand('copy');
-                window.getSelection().removeAllRanges();
-                return alert("Banner code copied successfully!");
-              }
-              </script>
-
-            <a style="font-size: 17px;text-align: center;display: block;padding: 20px 0px 0px 0px;" onclick="viewBanner2()">View Image  <i class="fa fa-chevron-down"></i></a>
-            <div style="display:none;margin-top:20px; text-align: center;padding: 0px;margin: 0px;" id="banner2">
-            <img src='assets/image/banner/300x600.png' width='300px' height='600px' href='https://snapper.fi/?={{account.address}}' style="margin:10px 0px;">
-            <a style="font-family: monospace;font-size: 11px;">https://snapper.fi/assets/image/banner/300x600.png</a>
-          </div>
-
-          </td>
-        </tr>
-      </table>
-    </div> <div style="height:40px"></div>
-
-    <div  style="font-size: 14px;text-align: left;width: 400px; margin: 0px 20px; background-color:#fff;padding: 15px;border-radius: 15px;">
-      <a><b>Banner:</b> 728x90</a>
-      <a href="https://snapper.fi/assets/image/banner/728x90.png" target="_blank" ><button style="float: right;margin-top: -5px;width: 100px;font-size: 14px;padding: 5px 0px;background: #2c76d8;margin-left:10px;">Direct link <i class="fas fa-image"></i></button></a>
-      <button onclick="copyBanner3(), plausible('copy_banner')" style="float: right;margin-top: -5px;width: 100px;font-size: 14px;padding: 5px 0px;background: #60ae5d;display: inline">Copy code <i class="fas fa-code"></i></button>
-
-      <table class="form-table-b2" style="width: 360px;border-radius: 15px;margin-top: 10px;">
-        <tr>
-          <td>
-            <textarea id="linkBanner3" onclick="this.focus();this.select()" style="overflow: hidden;overflow-wrap: break-word;resize: vertical;border: 0px;width: 370px;background: rgb(233, 233, 233);border-radius: 15px;padding: 10px;margin-top: 10px;height:60px">&lt;img width='728px' height='90px' src='https://snapper.fi/assets/image/banner/728x90.png' href='https://snapper.fi/?={{account.address}}'&gt;</textarea>
-            <script>
-              function copyBanner3(id) {
-                var r = document.createRange();
-                r.selectNode(document.getElementById("linkBanner3"));
-                window.getSelection().removeAllRanges();
-                window.getSelection().addRange(r);
-                document.execCommand('copy');
-                window.getSelection().removeAllRanges();
-                return alert("Banner code copied successfully!");
-              }
-              </script>
-
-            <a style="font-size: 17px;text-align: center;display: block;padding: 20px 0px 0px 0px;" onclick="viewBanner3()">View Image  <i class="fa fa-chevron-down"></i></a>
-            <div style="display:none;margin-top:20px; text-align: center;padding: 0px;margin: 0px;" id="banner3">
-            <img src='assets/image/banner/728x90.png' width='728px' height='90px' href='https://snapper.fi/?={{account.address}}' style="margin:10px 0px;">
-            <a style="font-family: monospace;font-size: 11px;">https://snapper.fi/assets/image/banner/728x90.png</a>
-          </div>
-
-          </td>
-        </tr>
-      </table>
     </div>
-
-
-  <hr style="width: 600px; margin-top:50px">
-
-  <!-- OTHER -->
-
-  <h1>Useful Links <i class="fas fa-hands-helping"></i></h1>
-  <button class="buttonHelp" style="margin-top: -5px;font-size: 14px;"><a href="#" target="_blank"><i class="fas fa-chart-area"> </i> Analytics Dashboard</a></button>
-  <button class="buttonHelp" style="margin-top: -5px;font-size: 14px;"><a href="#" target="_blank"><i class="fas fa-ghost"> </i> Proxy Accounts</a></button>
-  <button class="buttonHelp" style="margin-top: -5px;font-size: 14px;"><a href="#" target="_blank"><i class="fas fa-code"> </i> Other...</a></button>
-
-  </div>
 
     <script>
       function sintaxLink() {
